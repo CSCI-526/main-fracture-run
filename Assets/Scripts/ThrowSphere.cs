@@ -42,13 +42,20 @@ public class ThrowSphere : MonoBehaviour
             Debug.Log("sphere created：" + sphere.name);
 
             Rigidbody rb = sphere.GetComponent<Rigidbody>();
+            Collider sphereCollider = sphere.GetComponent<Collider>();
+            Collider playerCollider = playerController.GetComponent<Collider>();
+
             if (rb == null)
             {
                 Debug.LogError("error: sphere has no rigid body component！");
                 return;
             }
 
-        
+            if (sphereCollider != null && playerCollider != null)
+            {
+                Physics.IgnoreCollision(sphereCollider, playerCollider);
+            }
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 targetPoint;
 

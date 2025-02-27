@@ -1717,7 +1717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spherePrefab: {fileID: 8182214826264842924, guid: 05e1c9e8416fa4d5f8641d0197577d0f, type: 3}
-  throwForce: 60
+  throwForce: 20
   playerController: {fileID: 1427345380}
 --- !u!4 &703883223
 Transform:
