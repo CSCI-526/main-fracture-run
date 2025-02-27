@@ -3,7 +3,7 @@ using UnityEngine;
 public class ThrowSphere : MonoBehaviour
 {
     public GameObject spherePrefab; 
-    public float throwForce = 10f; 
+    public float throwForce = 50f; 
     public PlayerController playerController;
 
     void Update()
@@ -63,8 +63,9 @@ public class ThrowSphere : MonoBehaviour
  
             Vector3 throwDirection = (targetPoint - spawnPosition).normalized;
 
-            rb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
-
+            //rb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
+            rb.mass = 0.1f;
+            rb.AddForce(throwDirection * throwForce, ForceMode.VelocityChange);
             //Debug.Log("球体朝 " + targetPoint + " 抛出！");
             playerController.AddBallCount(-1);
         }
