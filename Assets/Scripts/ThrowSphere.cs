@@ -5,6 +5,7 @@ public class ThrowSphere : MonoBehaviour
     public GameObject spherePrefab; 
     public float throwForce = 50f; 
     public PlayerController playerController;
+    public Vector3 throwOffset = new Vector3(-1.5f, 3f, 0);
 
     void Update()
     {
@@ -33,8 +34,10 @@ public class ThrowSphere : MonoBehaviour
                 return;
             }
 
-            
-            Vector3 initialPosition = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            Vector3 playerPosition = player.transform.position;
+            Vector3 initialPosition = playerPosition + throwOffset;
+            //Vector3 initialPosition = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
 
             // create sphere
             GameObject sphere = Instantiate(spherePrefab, initialPosition, Quaternion.identity);
