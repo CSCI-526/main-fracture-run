@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5.0f; // Set player's movement speed.
     public float strafeSpeed = 4.0f; // Set player's rotation speed.
-    public int ballCount = 5; //Starting with 5 ballls.
+    public int ballCount = 5; //Start with 5 balls.
     public TMP_Text ballCountText; // Reference to the Text UI for curr
     
     public TMP_Text gameOverText;
@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public TMP_Text clickText;
 
     private Rigidbody rb; // Reference to player's Rigidbody.
+    private Transform spawnTransform; // Reference to the spawn point.
 
     // Start is called before the first frame update
     private void Start()
@@ -28,6 +29,17 @@ public class PlayerController : MonoBehaviour
         UpdateBallCountUI();
         gameOverText.gameObject.SetActive(false);
         clickText.gameObject.SetActive(false);
+
+        GameObject spawnPoint = GameObject.FindGameObjectWithTag("Respawn");
+        if (spawnPoint != null)
+        {
+            spawnTransform = spawnPoint.transform; // Access the spawn point's transform.
+        }
+        else
+        {
+            Debug.LogError("SpawnPoint not found in the scene!");
+        }
+        Teleport(spawnTransform);
     }
 
     private void Update() 
@@ -89,6 +101,14 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    // Player teleported to the spawn point
+    public void Teleport(Transform spawnTransform)
+    {
+        transform.position = spawnTransform.position;
+        transform.rotation = spawnTransform.rotation;
+        rb.velocity = Vector3.zero; 
+    }
+
     private void UpdateBallCountUI()
     {
         if (ballCountText != null)
@@ -119,7 +139,7 @@ public class PlayerController : MonoBehaviour
 
     public void RestartGame()
     {
-        transform.position = Vector3.zero;
+        Teleport(spawnTransform);
         gameOverText.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1f;

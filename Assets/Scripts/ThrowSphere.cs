@@ -34,10 +34,10 @@ public class ThrowSphere : MonoBehaviour
             }
 
             
-            Vector3 spawnPosition = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
+            Vector3 initialPosition = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
 
             // create sphere
-            GameObject sphere = Instantiate(spherePrefab, spawnPosition, Quaternion.identity);
+            GameObject sphere = Instantiate(spherePrefab, initialPosition, Quaternion.identity);
 
             Debug.Log("sphere created：" + sphere.name);
 
@@ -61,7 +61,7 @@ public class ThrowSphere : MonoBehaviour
 
             targetPoint = ray.GetPoint(50);
  
-            Vector3 throwDirection = (targetPoint - spawnPosition).normalized;
+            Vector3 throwDirection = (targetPoint - initialPosition).normalized;
 
             //rb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
             rb.mass = 0.1f;
