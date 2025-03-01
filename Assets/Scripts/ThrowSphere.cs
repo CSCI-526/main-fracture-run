@@ -3,7 +3,7 @@ using UnityEngine;
 public class ThrowSphere : MonoBehaviour
 {
     public GameObject spherePrefab; 
-    public float throwForce = 50f; 
+    public float throwForce = 150f; 
     public PlayerController playerController;
     public Vector3 throwOffset = new Vector3(-1.5f, 3f, 0);
 
