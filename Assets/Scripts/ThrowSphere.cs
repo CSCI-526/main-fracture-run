@@ -3,19 +3,28 @@ using UnityEngine;
 public class ThrowSphere : MonoBehaviour
 {
     public GameObject spherePrefab; 
-    public float throwForce = 150f; 
+    //public float throwForce = 150f; 
+    //public float throwForce = 50f; 
     public PlayerController playerController;
-    public Vector3 throwOffset = new Vector3(-1.5f, 3f, 0);
+    public float initSpeed = 10f;
+    public float initAngle = 60.0f;
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) 
         {
-            Throw();
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit)) 
+            {
+                Vector3 targetPoint = hit.point; 
+                Throw(targetPoint); 
+            }
         }
     }
 
-    void Throw()
+    void Throw(Vector3 targetPoint)
     {
         if (playerController == null)
         {
@@ -35,8 +44,7 @@ public class ThrowSphere : MonoBehaviour
             }
 
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            Vector3 playerPosition = player.transform.position;
-            Vector3 initialPosition = playerPosition + throwOffset;
+            Vector3 initialPosition = player.transform.position;
             //Vector3 initialPosition = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
 
             // create sphere
@@ -45,36 +53,52 @@ public class ThrowSphere : MonoBehaviour
             Debug.Log("sphere created：" + sphere.name);
 
             Rigidbody rb = sphere.GetComponent<Rigidbody>();
-            Collider sphereCollider = sphere.GetComponent<Collider>();
-            Collider playerCollider = playerController.GetComponent<Collider>();
-
             if (rb == null)
             {
                 Debug.LogError("error: sphere has no rigid body component！");
                 return;
             }
+            rb.mass = 0.1f;
+
+            float playerSpeed = playerController.speed;
+
+            SphereController sphereScript = sphere.GetComponent<SphereController>();
+            if (sphereScript != null)
+            {
+                Vector3 throwDirection = targetPoint - initialPosition;
+                throwDirection.y = 0;
+                rb.velocity = SetInitialVelocity(throwDirection, playerSpeed, initSpeed, initAngle);
+            }
+
+            Collider sphereCollider = sphere.GetComponent<Collider>();
+            Collider playerCollider = playerController.GetComponent<Collider>();
 
             if (sphereCollider != null && playerCollider != null)
             {
                 Physics.IgnoreCollision(sphereCollider, playerCollider);
             }
 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 targetPoint;
-
-            targetPoint = ray.GetPoint(50);
- 
-            Vector3 throwDirection = (targetPoint - initialPosition).normalized;
-
             //rb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
-            rb.mass = 0.1f;
-            rb.AddForce(throwDirection * throwForce, ForceMode.VelocityChange);
+            //rb.AddForce(throwDirection * throwForce, ForceMode.VelocityChange);
             //Debug.Log("球体朝 " + targetPoint + " 抛出！");
+
+
             playerController.AddBallCount(-1);
         }
         else
         {
             Debug.Log("No more balls left!");
         }
+    }
+
+    public Vector3 SetInitialVelocity(Vector3 throwDirection, float playerSpeed, float speed, float angle)
+    {
+        float radian = angle * Mathf.Deg2Rad;
+        float verticalSpeed = speed * Mathf.Sin(radian);
+        float horizontalSpeed = speed * Mathf.Cos(radian) + playerSpeed;
+
+        Vector3 horizontalVelocity = throwDirection.normalized * horizontalSpeed;
+        Vector3 throwVelocity = horizontalVelocity + Vector3.up * verticalSpeed;
+        return throwVelocity;
     }
 }
