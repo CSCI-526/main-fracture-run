@@ -14,6 +14,9 @@ public class ThrowSphere : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) 
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Vector3 targetPoint = ray.GetPoint(50);
+            Throw(targetPoint);
+/*
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit)) 
@@ -21,6 +24,7 @@ public class ThrowSphere : MonoBehaviour
                 Vector3 targetPoint = hit.point; 
                 Throw(targetPoint); 
             }
+*/
         }
     }
 
