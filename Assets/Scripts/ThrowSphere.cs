@@ -6,25 +6,26 @@ public class ThrowSphere : MonoBehaviour
     //public float throwForce = 150f; 
     //public float throwForce = 50f; 
     public PlayerController playerController;
-    public float initSpeed = 10f;
-    public float initAngle = 60.0f;
+    public float speed = 12f;
+    public float angleOffset = 30.0f;
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) 
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 targetPoint = ray.GetPoint(50);
-            Throw(targetPoint);
-/*
             RaycastHit hit;
+            Vector3 targetPoint;
 
-            if (Physics.Raycast(ray, out hit)) 
+            if (Physics.Raycast(ray, out hit))
             {
-                Vector3 targetPoint = hit.point; 
-                Throw(targetPoint); 
+                targetPoint = hit.point;
+            } else {
+                targetPoint = ray.origin + ray.direction * 10f;
             }
-*/
+
+            //Vector3 targetPoint = ray.GetPoint(50);
+            Throw(targetPoint);
         }
     }
 
@@ -70,8 +71,7 @@ public class ThrowSphere : MonoBehaviour
             if (sphereScript != null)
             {
                 Vector3 throwDirection = targetPoint - initialPosition;
-                throwDirection.y = 0;
-                rb.velocity = SetInitialVelocity(throwDirection, playerSpeed, initSpeed, initAngle);
+                rb.velocity = SetInitialVelocity(throwDirection, playerSpeed, speed, angleOffset);
             }
 
             Collider sphereCollider = sphere.GetComponent<Collider>();
@@ -95,13 +95,16 @@ public class ThrowSphere : MonoBehaviour
         }
     }
 
-    public Vector3 SetInitialVelocity(Vector3 throwDirection, float playerSpeed, float speed, float angle)
+    public Vector3 SetInitialVelocity(Vector3 throwDirection, float playerSpeed, float speed, float angleOffset)
     {
+        Vector3 projection = Vector3.ProjectOnPlane(throwDirection, Vector3.up);
+        float angle = Vector3.Angle(throwDirection, projection) + angleOffset;
         float radian = angle * Mathf.Deg2Rad;
         float verticalSpeed = speed * Mathf.Sin(radian);
-        float horizontalSpeed = speed * Mathf.Cos(radian) + playerSpeed;
+        float horizontalSpeed = speed * Mathf.Cos(radian);
+        //Vector3 playerDirection = playerController.transform.forward;
 
-        Vector3 horizontalVelocity = throwDirection.normalized * horizontalSpeed;
+        Vector3 horizontalVelocity = projection.normalized * horizontalSpeed;
         Vector3 throwVelocity = horizontalVelocity + Vector3.up * verticalSpeed;
         return throwVelocity;
     }

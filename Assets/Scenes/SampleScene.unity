@@ -1654,7 +1654,7 @@ GameObject:
   - component: {fileID: 550620771}
   m_Layer: 0
   m_Name: LV2_GateOpen
-  m_TagString: Untagged
+  m_TagString: Crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2120,12 +2120,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -0.041445255, z: -2.2098274, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 597382688}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &597382688
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2198,9 +2198,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spherePrefab: {fileID: 8182214826264842924, guid: 05e1c9e8416fa4d5f8641d0197577d0f, type: 3}
-  throwForce: 30
   playerController: {fileID: 1427345380}
-  throwOffset: {x: -1.5, y: 3, z: 0}
+  speed: 12
+  angleOffset: 30
 --- !u!4 &703883223
 Transform:
   m_ObjectHideFlags: 0
@@ -2501,12 +2501,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -0.041445255, z: -2.2098274, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 770831245}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &770831245
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4582,12 +4582,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -0.041445255, z: -2.2098274, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1228070202}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1228070202
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5428,7 +5428,7 @@ Transform:
   m_GameObject: {fileID: 1399666105}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.68, y: 3.262, z: 0.88999987}
+  m_LocalPosition: {x: -22.68, y: 3.7, z: 0.88999987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7066,12 +7066,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -0.041445255, z: 18.50799, w: 3.5435839}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1809881522}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1809881522
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7589,7 +7589,7 @@ GameObject:
   - component: {fileID: 1872488787}
   m_Layer: 0
   m_Name: LV1_GateOpen
-  m_TagString: Untagged
+  m_TagString: Crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
