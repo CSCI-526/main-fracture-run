@@ -75,7 +75,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
+<<<<<<< HEAD
   controlID: 53
+=======
+  controlID: 52
+>>>>>>> fc60cf81 (old version)
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -96,8 +100,13 @@ MonoBehaviour:
     y: 0
     width: 291
     height: 484
+<<<<<<< HEAD
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> fc60cf81 (old version)
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -154,7 +163,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
+<<<<<<< HEAD
   controlID: 54
+=======
+  controlID: 53
+>>>>>>> fc60cf81 (old version)
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -291,9 +304,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: dc5f0000
       m_LastClickedID: 24540
       m_ExpandedIDs: e8faffff2e5f0000dc5f000030600000
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 04fbffff
+>>>>>>> fc60cf81 (old version)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -712,9 +731,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -64.25, y: 5.3, z: 0.06999999}
     speed: 2
     m_Value: {x: -64.25, y: 5.3, z: 0.06999999}
+=======
+    m_Target: {x: -49.48955, y: 17.468674, z: -28.113178}
+    speed: 2
+    m_Value: {x: -49.48955, y: 17.468674, z: -28.113178}
+>>>>>>> fc60cf81 (old version)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -760,6 +785,7 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: -0.0012003268, y: -0.9931883, z: 0.115981884, w: -0.010281988}
     speed: 2
     m_Value: {x: -0.0012003377, y: -0.99319726, z: 0.11598293, w: -0.010282081}
@@ -767,6 +793,15 @@ MonoBehaviour:
     m_Target: 8.926761
     speed: 2
     m_Value: 8.926761
+=======
+    m_Target: {x: -0.12035793, y: 0.8333721, z: -0.20024262, w: -0.5009073}
+    speed: 2
+    m_Value: {x: -0.120357916, y: 0.833372, z: -0.2002426, w: -0.50090724}
+  m_Size:
+    m_Target: 10
+    speed: 2
+    m_Value: 10
+>>>>>>> fc60cf81 (old version)
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -814,7 +849,11 @@ MonoBehaviour:
     x: 219
     y: 89
     width: 928
+<<<<<<< HEAD
     height: 463.5
+=======
+    height: 463
+>>>>>>> fc60cf81 (old version)
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -870,15 +909,22 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 928
+<<<<<<< HEAD
       height: 442.5
     m_Scale: {x: 0.8194444, y: 0.8194444}
     m_Translation: {x: 464, y: 221.25}
+=======
+      height: 442
+    m_Scale: {x: 0.8185185, y: 0.8185185}
+    m_Translation: {x: 463.99997, y: 221}
+>>>>>>> fc60cf81 (old version)
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -566.2373
       y: -270
       width: 1132.4746
@@ -886,6 +932,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 0.8194444
   m_LastWindowPixelSize: {x: 1856, y: 927}
+=======
+      x: -566.8778
+      y: -270
+      width: 1133.7556
+      height: 540
+    m_MinimalGUI: 1
+  m_defaultScale: 0.8185185
+  m_LastWindowPixelSize: {x: 1856, y: 926}
+>>>>>>> fc60cf81 (old version)
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -984,7 +1039,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Prefabs
+=======
+    - Assets
+>>>>>>> fc60cf81 (old version)
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -992,17 +1051,29 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /home/jieniu/Documents/work/USC/25spring/CSCI 526 Advanced Mobile
     Devices and Game Consoles/Fracture Run/main-fracture-run
+=======
+  - Assets
+  m_LastFoldersGridSize: 16
+  m_LastProjectPath: /Users/tuffy/Downloads/usc/2025Spring/CS526/main-fracture-run
+>>>>>>> fc60cf81 (old version)
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 60}
+<<<<<<< HEAD
     m_SelectedIDs: dc600000
     m_LastClickedID: 24796
     m_ExpandedIDs: 00000000d660000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: c85e0000
+    m_LastClickedID: 24264
+    m_ExpandedIDs: 00000000c85e000000ca9a3bffffff7f
+>>>>>>> fc60cf81 (old version)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1030,7 +1101,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000d6600000
+=======
+    m_ExpandedIDs: 00000000c85e0000
+>>>>>>> fc60cf81 (old version)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
