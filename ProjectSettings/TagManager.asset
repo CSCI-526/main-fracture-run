@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Crystal
   - Bonus
+  - Ground
   layers:
   - Default
   - TransparentFX

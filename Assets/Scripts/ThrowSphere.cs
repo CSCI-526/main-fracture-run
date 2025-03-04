@@ -4,25 +4,27 @@ public class ThrowSphere : MonoBehaviour
 {
     public GameObject spherePrefab; 
     //public float throwForce = 150f; 
-    //public float throwForce = 50f; 
+    public float throwForce = 6f; 
     public PlayerController playerController;
-    public float speed = 12f;
-    public float angleOffset = 30.0f;
+    // public float speed = 12f;
+    // public float angleOffset = 30.0f;
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) 
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+            //RaycastHit hit;
             Vector3 targetPoint;
 
-            if (Physics.Raycast(ray, out hit))
-            {
-                targetPoint = hit.point;
-            } else {
-                targetPoint = ray.origin + ray.direction * 10f;
-            }
+            targetPoint = ray.GetPoint(50);
+            
+            // if (Physics.Raycast(ray, out hit))
+            // {
+            //     targetPoint = hit.point;
+            // } else {
+            //     targetPoint = ray.origin + ray.direction * 10f;
+            // }
 
             //Vector3 targetPoint = ray.GetPoint(50);
             Throw(targetPoint);
@@ -49,7 +51,10 @@ public class ThrowSphere : MonoBehaviour
             }
 
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            Vector3 initialPosition = player.transform.position;
+            // get player scale
+            Vector3 playerScale = player.transform.localScale;
+            Vector3 offset = new Vector3(0, playerScale.y + 0.5f, 0);
+            Vector3 initialPosition = player.transform.position + offset;
             //Vector3 initialPosition = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
 
             // create sphere
@@ -65,14 +70,16 @@ public class ThrowSphere : MonoBehaviour
             }
             rb.mass = 0.1f;
 
-            float playerSpeed = playerController.speed;
+            Vector3 throwDirection = (targetPoint - initialPosition).normalized;
+            rb.AddForce(throwDirection * throwForce, ForceMode.Impulse);
+            // float playerSpeed = playerController.speed;
 
-            SphereController sphereScript = sphere.GetComponent<SphereController>();
-            if (sphereScript != null)
-            {
-                Vector3 throwDirection = targetPoint - initialPosition;
-                rb.velocity = SetInitialVelocity(throwDirection, playerSpeed, speed, angleOffset);
-            }
+            // SphereController sphereScript = sphere.GetComponent<SphereController>();
+            // if (sphereScript != null)
+            // {
+            //     Vector3 throwDirection = targetPoint - initialPosition;
+            //     rb.velocity = SetInitialVelocity(throwDirection, playerSpeed, speed, angleOffset);
+            // }
 
             Collider sphereCollider = sphere.GetComponent<Collider>();
             Collider playerCollider = playerController.GetComponent<Collider>();
