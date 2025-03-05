@@ -59,6 +59,7 @@ public class ThrowSphere : MonoBehaviour
 
             // create sphere
             GameObject sphere = Instantiate(spherePrefab, initialPosition, Quaternion.identity);
+            Destroy(sphere, 3f); // Destroy the sphere after 5 seconds
 
             Debug.Log("sphere created：" + sphere.name);
 

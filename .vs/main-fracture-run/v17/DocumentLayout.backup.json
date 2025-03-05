@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\assets\\scripts\\throwsphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\throwsphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\assets\\scripts\\spherecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spherecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|c:\\users\\desktop\\onedrive\\desktop\\csci526\\main-fracture-run\\assets\\scripts\\spherecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spherecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|c:\\users\\desktop\\onedrive\\desktop\\csci526\\main-fracture-run\\assets\\scripts\\throwsphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\throwsphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,26 +34,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "SphereController.cs",
               "DocumentMoniker": "C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\Assets\\Scripts\\SphereController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SphereController.cs",
               "ToolTip": "C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\Assets\\Scripts\\SphereController.cs",
               "RelativeToolTip": "Assets\\Scripts\\SphereController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T06:48:56.158Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ThrowSphere.cs",
               "DocumentMoniker": "C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\Assets\\Scripts\\ThrowSphere.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ThrowSphere.cs",
               "ToolTip": "C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\Assets\\Scripts\\ThrowSphere.cs",
               "RelativeToolTip": "Assets\\Scripts\\ThrowSphere.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowD0AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAowGoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T07:32:49.188Z",
               "EditorCaption": ""

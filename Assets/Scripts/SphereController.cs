@@ -6,12 +6,15 @@ public class SphereController : MonoBehaviour
     private bool Landed = false; 
     private Vector3 horizontalVelocity; 
     public float timeLapse = 2f;
+    public float destroyAfterThrown = 3f;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         horizontalVelocity = rb.velocity;
         horizontalVelocity.y = 0;
+
+        Invoke("DestroySphere", destroyAfterThrown);
     }
 
     void Update()
