@@ -56,7 +56,8 @@ public class Obstacle : MonoBehaviour
         {
             if (playerController != null)
             {
-                playerController.ShowGameOverWithDelay();
+                //playerController.ShowGameOverWithDelay();
+                playerController.ShowGameOver();
             }
 
             Destroy(gameObject); // Remove the obstacle after penalty is applied
