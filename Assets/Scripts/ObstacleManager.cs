@@ -51,6 +51,16 @@ public class Obstacle : MonoBehaviour
 
             Destroy(gameObject); // Remove the obstacle after penalty is applied
         }
+
+        if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Fan"))
+        {
+            if (playerController != null)
+            {
+                playerController.ShowGameOverWithDelay();
+            }
+
+            Destroy(gameObject); // Remove the obstacle after penalty is applied
+        } 
     }
 }
 

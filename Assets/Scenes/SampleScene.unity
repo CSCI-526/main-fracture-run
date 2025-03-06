@@ -6725,7 +6725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2834272415668104106, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Fan
       objectReference: {fileID: 0}
     - target: {fileID: 6119169842923383527, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       propertyPath: m_LocalScale.x
@@ -7982,7 +7982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2834272415668104106, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Fan
       objectReference: {fileID: 0}
     - target: {fileID: 6119169842923383527, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       propertyPath: m_LocalScale.x
@@ -9328,7 +9328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2834272415668104106, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Fan
       objectReference: {fileID: 0}
     - target: {fileID: 6119169842923383527, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       propertyPath: m_LocalScale.x

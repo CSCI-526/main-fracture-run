@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 0f;
         Debug.Log("Game Over!");
     }
-    private void ShowGameOverWithDelay()
+    public void ShowGameOverWithDelay()
     {
         StartCoroutine(ShowGameOverCoroutine());
     }

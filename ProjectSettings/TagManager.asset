@@ -9,6 +9,7 @@ TagManager:
   - Crystal
   - Bonus
   - Ground
+  - Fan
   layers:
   - Default
   - TransparentFX
