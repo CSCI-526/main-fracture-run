@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\assets\\scripts\\throwsphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|c:\\users\\desktop\\onedrive\\desktop\\csci526\\main-fracture-run\\assets\\scripts\\throwsphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\throwsphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|c:\\users\\desktop\\onedrive\\desktop\\csci526\\main-fracture-run\\assets\\scripts\\spherecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\assets\\scripts\\spherecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spherecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +34,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "SphereController.cs",
               "DocumentMoniker": "C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\Assets\\Scripts\\SphereController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SphereController.cs",
@@ -42,12 +42,11 @@
               "RelativeToolTip": "Assets\\Scripts\\SphereController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T06:48:56.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T06:48:56.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ThrowSphere.cs",
               "DocumentMoniker": "C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\Assets\\Scripts\\ThrowSphere.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ThrowSphere.cs",
@@ -60,15 +59,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\desktop\\OneDrive\\Desktop\\CSCI526\\main-fracture-run\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAUwH4AAABDAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAgwDsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T07:31:02.947Z"
+              "WhenOpened": "2025-02-27T07:31:02.947Z",
+              "EditorCaption": ""
             }
           ]
         }
