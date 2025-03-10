@@ -40,6 +40,12 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("SpawnPoint not found in the scene!");
         }
         Teleport(spawnTransform);
+
+        //cameraShake = FindObjectOfType<CameraShake>();
+        //if (cameraShake == null)
+        //{
+            //Debug.LogError("CameraShake script not found in the scene!");
+        //}
     }
 
     private void Update() 
