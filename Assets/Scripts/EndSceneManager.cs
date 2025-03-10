@@ -8,4 +8,8 @@ public class EndSceneManager : MonoBehaviour
         SceneManager.LoadScene("SampleScene"); // 重新加载游戏场景
     }
 
+     public void StartTutorial()
+    {
+        SceneManager.LoadScene("TutorialScene"); 
+    }
 }

@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb; // Reference to player's Rigidbody.
     private Transform spawnTransform; // Reference to the spawn point.
 
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         UpdateBallCountUI();
         gameOverText.gameObject.SetActive(false);
         clickText.gameObject.SetActive(false);
+
 
         GameObject spawnPoint = GameObject.FindGameObjectWithTag("Respawn");
         if (spawnPoint != null)
@@ -42,10 +44,21 @@ public class PlayerController : MonoBehaviour
         Teleport(spawnTransform);
     }
 
+
+
     private void Update() 
     {
+
         // game over
         float playerY = transform.position.y;
+        if (playerY < gameOverY) {
+            SceneManager.LoadScene("DeathScene"); 
+        }
+
+        if(ballCount == 0){
+            SceneManager.LoadScene("DeathScene1");
+        }
+
         if(playerY < gameOverY || ballCount == 0) {
             ShowGameOverWithDelay();
         }
