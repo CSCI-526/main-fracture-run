@@ -25,7 +25,7 @@ public class GateCollision : MonoBehaviour
         {
             // game over
             if(playerController != null) {
-                playerController.ShowGameOver();
+                //playerController.ShowGameOver();
             }
         }
     }

@@ -3,6 +3,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     public PlayerController playerController; // Reference to the PlayerController to access the ball count.
+    public CameraShake cameraShake;
 
     private void Start()
     {
@@ -10,6 +11,11 @@ public class Obstacle : MonoBehaviour
         if (playerController == null)
         {
             Debug.LogError("PlayerController reference not assigned in Obstacle script.");
+        }
+        cameraShake = FindObjectOfType<CameraShake>();
+        if (cameraShake == null)
+        {
+            Debug.LogError("CameraShake script not found in the scene!");
         }
     }
 
@@ -47,6 +53,12 @@ public class Obstacle : MonoBehaviour
             if (playerController != null)
             {
                 playerController.ApplyPenalty(); // Call a penalty function in PlayerController
+            }
+            
+            if (cameraShake != null)
+            {
+                Debug.Log("Shake the camera!");
+                cameraShake.Shake();
             }
 
             Destroy(gameObject); // Remove the obstacle after penalty is applied
