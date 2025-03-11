@@ -22,12 +22,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb; // Reference to player's Rigidbody.
     private Transform spawnTransform; // Reference to the spawn point.
 
-    public TMP_Text FloatingText;
-
 
     // Start is called before the first frame update
     private void Start()
     {
+
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
         UpdateBallCountUI();
         gameOverText.gameObject.SetActive(false);
@@ -45,6 +44,7 @@ public class PlayerController : MonoBehaviour
         }
         Teleport(spawnTransform);
 
+
         //cameraShake = FindObjectOfType<CameraShake>();
         //if (cameraShake == null)
         //{
@@ -56,7 +56,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update() 
     {
-
         // game over
         float playerY = transform.position.y;
         if (playerY < gameOverY) {
@@ -77,13 +76,17 @@ public class PlayerController : MonoBehaviour
             RestartGame();
         }
 
-        // movement notification disappear
-        if(transform.position.x < -8f) {
+        if(transform.position.x > -20f) {
+            MovementText.gameObject.SetActive(true);
+            clickText.gameObject.SetActive(false);
+        }
+
+        if(transform.position.x < -20f) {
             MovementText.gameObject.SetActive(false);
             clickText.gameObject.SetActive(true);
         }
 
-        if(transform.position.x < -20f) {
+        if(transform.position.x < -40f) {
             clickText.gameObject.SetActive(false);
         }
     }
@@ -99,16 +102,6 @@ public class PlayerController : MonoBehaviour
     // Handle physics-based movement and rotation.
     private void FixedUpdate()
     {
-        //// Player always move forward
-        //// float moveVertical = Input.GetAxis("Vertical");
-        //float moveVertical = 1.0f;
-        //Vector3 movement = transform.forward * moveVertical * speed * Time.fixedDeltaTime;
-        //rb.MovePosition(rb.position + movement);
-
-        //// Rotate player based on horizontal input.
-        //float turn = Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime;
-        //Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
-        //rb.MoveRotation(rb.rotation * turnRotation);
 
         // Player always moves forward
         Vector3 forwardMovement = transform.forward * speed * Time.fixedDeltaTime;
@@ -165,9 +158,9 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1f;
     }
-    public void ApplyPenalty()
+    public void ApplyPenalty(int change_score)
     {
-        ballCount = Mathf.Max(0, ballCount - 5);
+        ballCount = Mathf.Max(0, ballCount + change_score);
         ballCountText.text = "Total Balls: " + ballCount;// Example: Reduce 2 balls, but not below 0
     }
 

@@ -24,13 +24,13 @@ public class Obstacle : MonoBehaviour
         }
     }
 
-    void ShowFloatingText()
+    public void ShowFloatingText(string point)
     {
         
         if (floatingTextPrefab && canvasTransform)
         {
             GameObject text = Instantiate(floatingTextPrefab, canvasTransform);
-            text.GetComponent<TextMeshProUGUI>().text = "-5";
+            text.GetComponent<TextMeshProUGUI>().text = point;
         }
     }
 
@@ -44,31 +44,26 @@ public class Obstacle : MonoBehaviour
 
             if (gameObject.CompareTag("Crystal") && playerController != null)
             {
+                ShowFloatingText("+3");
                 playerController.AddBallCount(3); // Increase ball count
             }
 
-            // Destroy both Crystals & Obstacles when hit
-            Destroy(gameObject);
-        }
-        if (collision.gameObject.CompareTag("Ball"))
-        {
-            // Destroy the obstacle.
-            Destroy(gameObject);
-
             if (gameObject.CompareTag("Bonus") && playerController != null)
             {
+                ShowFloatingText("+8");
                 playerController.AddBallCount(8); // Increase ball count
             }
 
             // Destroy both Crystals & Obstacles when hit
             Destroy(gameObject);
         }
+        
         if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Obstacle"))
         {
             if (playerController != null)
             {
-                ShowFloatingText();
-                playerController.ApplyPenalty(); // Call a penalty function in PlayerController
+                ShowFloatingText("-5");
+                playerController.ApplyPenalty(-5); // Call a penalty function in PlayerController
             }
             
             
@@ -91,6 +86,7 @@ public class Obstacle : MonoBehaviour
 
             Destroy(gameObject); // Remove the obstacle after penalty is applied
         } 
+
     }
 }
 

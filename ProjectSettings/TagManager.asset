@@ -10,6 +10,7 @@ TagManager:
   - Bonus
   - Ground
   - Fan
+  - Gate
   layers:
   - Default
   - TransparentFX

@@ -9,10 +9,13 @@ public class ThrowSphere : MonoBehaviour
     // public float speed = 12f;
     // public float angleOffset = 30.0f;
 
+    public Obstacle obstacleManager;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) 
         {
+            obstacleManager.ShowFloatingText("-1");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             //RaycastHit hit;
             Vector3 targetPoint;

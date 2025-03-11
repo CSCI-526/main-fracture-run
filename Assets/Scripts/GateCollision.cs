@@ -1,22 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GateCollision : MonoBehaviour
 {
     public PlayerController playerController; // Reference to the PlayerController to access the ball count.
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Obstacle obstacleManager;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -26,7 +17,10 @@ public class GateCollision : MonoBehaviour
             // game over
             if(playerController != null) {
                 //playerController.ShowGameOver();
+                obstacleManager.ShowFloatingText("-10");
+                playerController.ApplyPenalty(-10);
             }
+            Destroy(gameObject);
         }
     }
 }

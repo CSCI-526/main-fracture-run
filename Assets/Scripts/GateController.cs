@@ -7,16 +7,18 @@ public class GateController : MonoBehaviour
 
     public GameObject left_gate;
     public GameObject right_gate;
+
+    public float openDistance = 5f;
+
+    private Vector3 leftGateTarget;
+    private Vector3 rightGateTarget;
+
+
     // Start is called before the first frame update
     void Start()
     {    
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        leftGateTarget = left_gate.transform.position + new Vector3(0, 0, -openDistance);
+        rightGateTarget = right_gate.transform.position + new Vector3(0, 0, openDistance);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -27,8 +29,10 @@ public class GateController : MonoBehaviour
             // Destroy the obstacle.
             Destroy(gameObject);
             // Open Gate
-            left_gate.transform.position = new Vector3(left_gate.transform.position.x, left_gate.transform.position.y, left_gate.transform.position.z - 5);
-            right_gate.transform.position = new Vector3(right_gate.transform.position.x, right_gate.transform.position.y, right_gate.transform.position.z + 5);
+            left_gate.transform.position = leftGateTarget;
+            right_gate.transform.position = rightGateTarget;
         }
     }
+
+
 }

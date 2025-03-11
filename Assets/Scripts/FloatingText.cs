@@ -26,4 +26,5 @@ public class FloatingText : MonoBehaviour
         textColor.a -= fadeSpeed * Time.deltaTime;
         textMesh.color = textColor;
     }
+
 }
