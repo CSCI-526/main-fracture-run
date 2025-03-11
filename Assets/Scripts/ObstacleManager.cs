@@ -1,9 +1,14 @@
 using UnityEngine;
+using TMPro;
+
 
 public class Obstacle : MonoBehaviour
 {
     public PlayerController playerController; // Reference to the PlayerController to access the ball count.
     public CameraShake cameraShake;
+
+    public GameObject floatingTextPrefab; 
+    public Transform canvasTransform; 
 
     private void Start()
     {
@@ -16,6 +21,16 @@ public class Obstacle : MonoBehaviour
         if (cameraShake == null)
         {
             Debug.LogError("CameraShake script not found in the scene!");
+        }
+    }
+
+    void ShowFloatingText()
+    {
+        
+        if (floatingTextPrefab && canvasTransform)
+        {
+            GameObject text = Instantiate(floatingTextPrefab, canvasTransform);
+            text.GetComponent<TextMeshProUGUI>().text = "-5";
         }
     }
 
@@ -52,8 +67,10 @@ public class Obstacle : MonoBehaviour
         {
             if (playerController != null)
             {
+                ShowFloatingText();
                 playerController.ApplyPenalty(); // Call a penalty function in PlayerController
             }
+            
             
             if (cameraShake != null)
             {

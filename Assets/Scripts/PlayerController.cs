@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb; // Reference to player's Rigidbody.
     private Transform spawnTransform; // Reference to the spawn point.
 
+    public TMP_Text FloatingText;
+
 
     // Start is called before the first frame update
     private void Start()
