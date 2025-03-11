@@ -30,6 +30,7 @@ public class ThrowSphere : MonoBehaviour
             // }
 
             //Vector3 targetPoint = ray.GetPoint(50);
+            Debug.Log("Throw!");
             Throw(targetPoint);
         }
     }

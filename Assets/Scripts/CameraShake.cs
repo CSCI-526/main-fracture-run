@@ -5,9 +5,9 @@ public class CameraShake : MonoBehaviour
 {
     private CinemachineVirtualCamera vcam; // Reference to the virtual camera
     private CinemachineBasicMultiChannelPerlin noise; // Noise for shaking
-    public float shakeDuration = 1f; // How long the shake lasts
-    public float shakeAmplitude = 20f; // Intensity of the shake
-    public float shakeFrequency = 20f; // Speed of the shake
+    public float shakeDuration = 0.5f; // How long the shake lasts
+    public float shakeAmplitude = 1f; // Intensity of the shake
+    public float shakeFrequency = 50f; // Speed of the shake
 
     private float shakeTimer = 0f; // Tracks remaining shake time
 
@@ -26,15 +26,18 @@ public class CameraShake : MonoBehaviour
             Debug.LogError("CameraShake: No CinemachineBasicMultiChannelPerlin found on Virtual Camera!");
             return;
         }
+
+        if (noise.m_NoiseProfile == null)
+        {
+            Debug.LogError("No Noise Profile assigned! Assign one in the editor.");
+        }
     }
 
     public void Shake()
     {
+        Debug.Log("CameraShake applied to: " + GetComponent<CinemachineVirtualCamera>().name);
         Debug.Log("Shake method called!");
-        //if (noise == null) return; // Prevent errors
-
-        //noise.m_AmplitudeGain = shakeAmplitude; // Set shake intensity
-        //noise.m_FrequencyGain = shakeFrequency; // Set shake speed
+        
         shakeTimer = shakeDuration; // Start shake timer
     }
 
@@ -44,9 +47,14 @@ public class CameraShake : MonoBehaviour
         {
             Debug.Log("set noise parameters for shake");
             shakeTimer -= Time.deltaTime; // Reduce shake time
-            noise.m_AmplitudeGain = shakeAmplitude; // Set shake intensity
-            Debug.Log("shakeAmplitude: " + shakeAmplitude);
-            noise.m_FrequencyGain = shakeFrequency; // Set shake speed
+            float elapsedTime = shakeDuration - shakeTimer; 
+            float randomFactor = 1f + Random.Range(-0.25f, 0.25f); 
+
+            float dynamicAmplitude = shakeAmplitude * randomFactor * 
+                                    Mathf.Sin(Mathf.PI * elapsedTime / shakeDuration);
+            noise.m_AmplitudeGain = dynamicAmplitude; 
+            Debug.Log("dynamicAmplitude: " + dynamicAmplitude);
+            noise.m_FrequencyGain = shakeFrequency * (1f + Mathf.Sin(elapsedTime * 2f)); 
             Debug.Log("shakeFrequency: " + shakeFrequency);
         }
         else 

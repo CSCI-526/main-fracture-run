@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 234612731}
-  cameraShake: {fileID: 0}
+  cameraShake: {fileID: 1982719482}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 1623055478}
 --- !u!4 &194470889
@@ -688,6 +688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1010084671295561648, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1628761798182179484, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.619999
@@ -728,6 +732,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6527846611672373818, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 1982719482}
     - target: {fileID: 6527846611672373818, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: canvasTransform
       value: 
@@ -860,7 +868,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 50
+  field of view: 70
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -890,6 +898,7 @@ GameObject:
   - component: {fileID: 680922347}
   - component: {fileID: 680922346}
   - component: {fileID: 680922345}
+  - component: {fileID: 680922348}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -973,6 +982,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &680922348
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680922343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 4c03d240ca68614b195266b2c93ca208, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 1
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &749427552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,6 +1371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1010084671295561648, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1628761798182179484, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.619999
@@ -1385,6 +1415,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6527846611672373818, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 1982719482}
     - target: {fileID: 6527846611672373818, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: canvasTransform
       value: 
@@ -1911,7 +1945,7 @@ GameObject:
   - component: {fileID: 1038177550}
   m_Layer: 0
   m_Name: LV1_LeftGate
-  m_TagString: Gate
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2186,6 +2220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1010084671295561648, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1628761798182179484, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.619999
@@ -2227,6 +2265,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6527846611672373818, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 1982719482}
+    - target: {fileID: 6527846611672373818, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: canvasTransform
       value: 
       objectReference: {fileID: 1623055478}
@@ -2250,6 +2292,10 @@ PrefabInstance:
     - target: {fileID: 983789849572799929, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: m_Name
       value: Cube (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010084671295561648, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1628761798182179484, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2291,6 +2337,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6527846611672373818, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 1982719482}
     - target: {fileID: 6527846611672373818, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: canvasTransform
       value: 
@@ -2517,7 +2567,7 @@ GameObject:
   - component: {fileID: 1511656890}
   m_Layer: 0
   m_Name: GroundObstacles
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3090,6 +3140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1010084671295561648, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1628761798182179484, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.130001
@@ -3130,6 +3184,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6527846611672373818, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 1982719482}
     - target: {fileID: 6527846611672373818, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: canvasTransform
       value: 
@@ -3263,6 +3321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1982719481}
   - component: {fileID: 1982719480}
+  - component: {fileID: 1982719482}
   m_Layer: 0
   m_Name: vcam1
   m_TagString: Untagged
@@ -3291,7 +3350,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 234612732}
   m_Follow: {fileID: 234612732}
   m_Lens:
-    FieldOfView: 50
+    FieldOfView: 70
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -3325,6 +3384,21 @@ Transform:
   - {fileID: 680922344}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 45, y: -90, z: 0}
+--- !u!114 &1982719482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982719479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd52ec1bcaa57a0cba5b1d5052b35747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0.5
+  shakeAmplitude: 1
+  shakeFrequency: 50
 --- !u!1 &2123903707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3502,6 +3576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LV1_RightGate
       objectReference: {fileID: 0}
+    - target: {fileID: 6473799645543960201, guid: 047b54e070a894e948bccc89029611a8, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 7473549627322288431, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.03
@@ -3571,6 +3649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1010084671295561648, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1628761798182179484, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.130001
@@ -3611,6 +3693,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6527846611672373818, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
+      propertyPath: cameraShake
+      value: 
+      objectReference: {fileID: 1982719482}
     - target: {fileID: 6527846611672373818, guid: de14e2549fe1f44e6b9ecd6b95e88382, type: 3}
       propertyPath: canvasTransform
       value: 

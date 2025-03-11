@@ -316,6 +316,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!65 &144171539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -387,96 +389,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144171536}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &176350124
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 176350125}
-  - component: {fileID: 176350127}
-  - component: {fileID: 176350126}
-  - component: {fileID: 176350128}
-  m_Layer: 5
-  m_Name: RedLayer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &176350125
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176350124}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 451706177}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1820, y: -980}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &176350126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176350124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.39215687}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &176350127
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176350124}
-  m_CullTransparentMesh: 1
---- !u!114 &176350128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176350124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e29f8361bb286bc99cc988fd5bb73c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redOverlay: {fileID: 0}
-  flashDuration: 0.5
 --- !u!1 &218388488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +927,7 @@ GameObject:
   - component: {fileID: 297184798}
   - component: {fileID: 297184797}
   - component: {fileID: 297184800}
+  - component: {fileID: 297184802}
   m_Layer: 0
   m_Name: LV1_LeftGate
   m_TagString: Obstacle
@@ -1054,7 +967,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1121,6 +1034,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
+  obstacleManager: {fileID: 0}
+--- !u!114 &297184802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297184795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 1427345380}
+  cameraShake: {fileID: 1173719167}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!1 &324082335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,6 +1218,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!4 &366136158 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6042340475308392053, guid: f9d8f3d8758ce45e4b1a404ebd5c8d75, type: 3}
@@ -1306,6 +1238,7 @@ GameObject:
   - component: {fileID: 369809596}
   - component: {fileID: 369809595}
   - component: {fileID: 369809598}
+  - component: {fileID: 369809600}
   m_Layer: 0
   m_Name: LV1_RightGate
   m_TagString: Obstacle
@@ -1345,7 +1278,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1412,6 +1345,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
+  obstacleManager: {fileID: 0}
+--- !u!114 &369809600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369809593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 1427345380}
+  cameraShake: {fileID: 1173719167}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!1 &374849286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,6 +1433,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!1 &392243237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1693,108 +1645,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446465261}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &451706173
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 451706177}
-  - component: {fileID: 451706176}
-  - component: {fileID: 451706175}
-  - component: {fileID: 451706174}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &451706174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451706173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &451706175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451706173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &451706176
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451706173}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &451706177
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451706173}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 176350125}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &504859674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,6 +1793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left_gate: {fileID: 1983810920}
   right_gate: {fileID: 1363667945}
+  openDistance: 5
 --- !u!65 &550620772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2063,6 +1914,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!65 &555487584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2217,6 +2070,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!65 &594403510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2491,6 +2346,7 @@ MonoBehaviour:
   spherePrefab: {fileID: 8182214826264842924, guid: 05e1c9e8416fa4d5f8641d0197577d0f, type: 3}
   throwForce: 6
   playerController: {fileID: 1427345380}
+  obstacleManager: {fileID: 2045301453}
 --- !u!4 &703883223
 Transform:
   m_ObjectHideFlags: 0
@@ -2993,6 +2849,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!65 &805310604
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3261,11 +3119,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NoiseProfile: {fileID: 11400000, guid: c9901a36bea879bbf8f5c77a5ab4bcaf, type: 2}
+  m_NoiseProfile: {fileID: 11400000, guid: 4c03d240ca68614b195266b2c93ca208, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 50
-  m_FrequencyGain: 5
-  mNoiseOffsets: {x: -15.086792, y: -665.04407, z: -189.98947}
+  m_AmplitudeGain: 1
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &897807772
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,7 +3173,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
-  cameraShake: {fileID: 0}
+  cameraShake: {fileID: 1173719167}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!65 &897807775
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3413,7 +3273,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!4 &961812295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6042340475308392053, guid: f9d8f3d8758ce45e4b1a404ebd5c8d75, type: 3}
@@ -4015,6 +3875,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!65 &1013102626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4316,6 +4178,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!1 &1084684087
 GameObject:
   m_ObjectHideFlags: 0
@@ -4629,6 +4493,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!65 &1152641616
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4785,9 +4651,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd52ec1bcaa57a0cba5b1d5052b35747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeDuration: 1
-  shakeAmplitude: 20
-  shakeFrequency: 20
+  shakeDuration: 0.5
+  shakeAmplitude: 0.5
+  shakeFrequency: 50
 --- !u!1 &1228070199
 GameObject:
   m_ObjectHideFlags: 0
@@ -5263,6 +5129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!65 &1318837996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5487,7 +5355,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
-  cameraShake: {fileID: 0}
+  cameraShake: {fileID: 1173719167}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!1 &1363667945
 GameObject:
   m_ObjectHideFlags: 0
@@ -5536,6 +5406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
+  obstacleManager: {fileID: 2045301453}
 --- !u!65 &1363667948
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5823,7 +5694,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
-  cameraShake: {fileID: 0}
+  cameraShake: {fileID: 1173719167}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!65 &1406379323
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5921,7 +5794,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &1412968076
 GameObject:
   m_ObjectHideFlags: 0
@@ -6199,7 +6072,6 @@ GameObject:
   - component: {fileID: 1427345381}
   - component: {fileID: 1427345380}
   - component: {fileID: 1427345385}
-  - component: {fileID: 1427345386}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -6339,22 +6211,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
-  m_CollisionDetection: 0
---- !u!114 &1427345386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427345379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.9528302, g: 0.05842829, b: 0.05842829, a: 0.5}
-  m_EffectDistance: {x: 10, y: -10}
-  m_UseGraphicAlpha: 1
+  m_CollisionDetection: 1
 --- !u!1 &1448748435
 GameObject:
   m_ObjectHideFlags: 0
@@ -7822,6 +7679,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!1 &1836398154
 GameObject:
   m_ObjectHideFlags: 0
@@ -7976,7 +7835,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
-  cameraShake: {fileID: 0}
+  cameraShake: {fileID: 1173719167}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!65 &1838385702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8074,7 +7935,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &1872488785
 GameObject:
   m_ObjectHideFlags: 0
@@ -8124,6 +7985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left_gate: {fileID: 297184795}
   right_gate: {fileID: 369809593}
+  openDistance: 5
 --- !u!65 &1872488788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8226,6 +8088,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!1001 &1893638691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8496,6 +8360,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!65 &1981071978
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8615,6 +8481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
+  obstacleManager: {fileID: 2045301453}
 --- !u!65 &1983810923
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8845,6 +8712,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 0}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
 --- !u!65 &2031141999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8916,6 +8785,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031141996}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2045301452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045301454}
+  - component: {fileID: 2045301453}
+  m_Layer: 0
+  m_Name: ObstacleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2045301453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045301452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 1427345380}
+  cameraShake: {fileID: 1173719167}
+  floatingTextPrefab: {fileID: 0}
+  canvasTransform: {fileID: 0}
+--- !u!4 &2045301454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045301452}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.066694, y: 1.7835054, z: 0.34387657}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2081775495
 GameObject:
   m_ObjectHideFlags: 0
@@ -9824,4 +9741,4 @@ SceneRoots:
   - {fileID: 1955401114}
   - {fileID: 1173719166}
   - {fileID: 1448748438}
-  - {fileID: 451706177}
+  - {fileID: 2045301454}
