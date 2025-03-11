@@ -19,9 +19,11 @@ public class PlayerController : MonoBehaviour
     public TMP_Text MovementText;
     public TMP_Text clickText;
 
+    public SendToGoogle googleForm;
+
     private Rigidbody rb; // Reference to player's Rigidbody.
     private Transform spawnTransform; // Reference to the spawn point.
-
+    
 
     // Start is called before the first frame update
     private void Start()
@@ -59,11 +61,16 @@ public class PlayerController : MonoBehaviour
         // game over
         float playerY = transform.position.y;
         if (playerY < gameOverY) {
+            
             SceneManager.LoadScene("DeathScene"); 
+            googleForm._gameOverReason = "fall";
+            googleForm.Send();
         }
 
         if(ballCount == 0){
             SceneManager.LoadScene("DeathScene1");
+            googleForm._gameOverReason = "zeroball";
+            googleForm.Send();
         }
 
         if(playerY < gameOverY || ballCount == 0) {
@@ -164,4 +171,14 @@ public class PlayerController : MonoBehaviour
         ballCountText.text = "Total Balls: " + ballCount;// Example: Reduce 2 balls, but not below 0
     }
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Main"))
+        {
+            SceneManager.LoadScene("BeginScene"); // 切换到结算场景
+            googleForm._gameOverReason = "Success";
+            googleForm.Send();
+        }
+    }
 }

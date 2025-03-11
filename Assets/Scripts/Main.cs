@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            SceneManager.LoadScene("BeginScene"); // 切换到结算场景
-        }
-    }
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         SceneManager.LoadScene("BeginScene"); // 切换到结算场景
+    //     }
+    // }
 }

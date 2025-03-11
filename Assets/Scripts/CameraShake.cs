@@ -59,7 +59,7 @@ public class CameraShake : MonoBehaviour
         }
         else 
         {
-            Debug.Log("set noise parameters to 0");
+            //Debug.Log("set noise parameters to 0");
             noise.m_AmplitudeGain = 0f; 
             noise.m_FrequencyGain = 0f; 
         }
