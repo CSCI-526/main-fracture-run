@@ -32,7 +32,7 @@ public class GateCollision : MonoBehaviour
                 cameraShake.Shake();
             }
 
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }

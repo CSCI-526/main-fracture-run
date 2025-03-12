@@ -40,12 +40,17 @@ public class SphereController : MonoBehaviour
 
             // Destroy the sphere in a time lapse
             Invoke("DestroySphere", timeLapse);
+
         }
 
         if (collision.gameObject.CompareTag("Crystal") 
-        || collision.gameObject.CompareTag("Bonus"))
+        || collision.gameObject.CompareTag("Bonus")
+        || collision.gameObject.CompareTag("Obstacle"))
         {
+
+            //DestroySphere();
             Destroy(gameObject);
+            Destroy(collision.gameObject); // Destroy the colliding object
         }
     }
 
