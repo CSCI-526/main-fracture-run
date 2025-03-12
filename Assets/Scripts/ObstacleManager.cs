@@ -9,6 +9,7 @@ public class Obstacle : MonoBehaviour
 
     public GameObject floatingTextPrefab; 
     public Transform canvasTransform; 
+    private bool penaltyApplied = false;
 
     private void Start()
     {
@@ -39,6 +40,17 @@ public class Obstacle : MonoBehaviour
         // Check if the object colliding with the obstacle is the ball.
         if (collision.gameObject.CompareTag("Ball"))
         {
+            // Disable its BoxCollider.
+            BoxCollider collider = GetComponent<BoxCollider>();
+            if (collider != null)
+            {
+                Debug.Log("Disable Obstacle BoxCollider of: " + gameObject.name);
+                collider.enabled = false;
+            }
+            else 
+            {
+                Debug.LogError("BoxCollider not found in the obstacle!");
+            }
             // Destroy the obstacle.
             Destroy(gameObject);
 
@@ -62,6 +74,7 @@ public class Obstacle : MonoBehaviour
         {
             if (playerController != null)
             {
+                Debug.Log("Player hit the obstacle: " + gameObject.name);
                 ShowFloatingText("-5");
                 playerController.ApplyPenalty(-5); // Call a penalty function in PlayerController
             }
@@ -69,47 +82,33 @@ public class Obstacle : MonoBehaviour
             
             if (cameraShake != null)
             {
-                Debug.Log("Shake the camera!");
+                Debug.Log("Shake the camera because player hit the obstacle: " + gameObject.name);
                 cameraShake.Shake();
             }
 
             Destroy(gameObject); // Remove the obstacle after penalty is applied
         }
 
-        // if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Gate"))
-        // {
-        //     if (playerController != null)
-        //     {
-        //         ShowFloatingText("-10");
-        //         playerController.ApplyPenalty(-10); // Call a penalty function in PlayerController
-        //     }
-            
-            
-        //     if (cameraShake != null)
-        //     {
-        //         Debug.Log("Shake the camera!");
-        //         cameraShake.Shake();
-        //     }
-
-        //     Destroy(gameObject); // Remove the obstacle after penalty is applied
-        // }
-
         if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Fan"))
         {
-            if (playerController != null)
+            Debug.Log("Player collides with Fan!");
+            if (!penaltyApplied)
             {
-                ShowFloatingText("-5");
-                playerController.ApplyPenalty(-5); // Call a penalty function in PlayerController
-            }
+                if (playerController != null)
+                {
+                    penaltyApplied = true;
+                    ShowFloatingText("-5");
+                    playerController.ApplyPenalty(-5); // Call a penalty function in PlayerController
+                }      
             
-            
-            if (cameraShake != null)
-            {
-                Debug.Log("Shake the camera!");
-                cameraShake.Shake();
-            }
+                if (cameraShake != null)
+                {
+                    Debug.Log("Shake the camera!");
+                    cameraShake.Shake();
+                }
 
-            Destroy(gameObject); // Remove the obstacle after penalty is applied
+                Destroy(gameObject); // Remove the obstacle after penalty is applied
+            }
 
         } 
 

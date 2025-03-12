@@ -1534,22 +1534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f421ce16889472986be76501d52a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &328557952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328557946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 1427345380}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &374849286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,22 +1591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f421ce16889472986be76501d52a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &375325230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375325224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 1427345380}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &392243237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2032,9 +2000,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 535347980}
+  - component: {fileID: 535347982}
+  - component: {fileID: 535347981}
   m_Layer: 0
   m_Name: Gate1 (1)
-  m_TagString: Untagged
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2058,6 +2028,42 @@ Transform:
   - {fileID: 1890585937}
   m_Father: {fileID: 392536847}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &535347981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535347979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f639d77ede74d5582d95fdc5d3c8a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 1427345380}
+  obstacleManager: {fileID: 2045301453}
+  cameraShake: {fileID: 1173719167}
+--- !u!65 &535347982
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535347979}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &555487581
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,9 +2195,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 583488759}
+  - component: {fileID: 583488760}
+  - component: {fileID: 583488761}
+  - component: {fileID: 583488762}
   m_Layer: 0
   m_Name: RotatingObstacles
-  m_TagString: Obstacle
+  m_TagString: Fan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2214,6 +2223,71 @@ Transform:
   - {fileID: 1893638692}
   m_Father: {fileID: 1342201437}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &583488760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583488758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 1427345380}
+  cameraShake: {fileID: 1173719167}
+  floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
+  canvasTransform: {fileID: 910889502}
+--- !u!64 &583488761
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583488758}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!54 &583488762
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583488758}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &594403507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,12 +2533,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -0.041445255, z: -2.2098274, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 597382688}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &597382688
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2602,28 +2676,13 @@ GameObject:
   - component: {fileID: 702068015}
   - component: {fileID: 702068014}
   - component: {fileID: 702068013}
-  - component: {fileID: 702068012}
   m_Layer: 0
   m_Name: LV1_LeftGate
-  m_TagString: Gate
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &702068012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 702068011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27f639d77ede74d5582d95fdc5d3c8a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 1427345380}
-  obstacleManager: {fileID: 1288019317}
 --- !u!65 &702068013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2641,7 +2700,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -4178,12 +4237,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -0.041445255, z: -2.2098274, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 982817832}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &982817832
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5620,54 +5679,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260458285}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1288019316
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1288019318}
-  - component: {fileID: 1288019317}
-  m_Layer: 0
-  m_Name: ObstaclesManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1288019317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288019316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 1427345380}
-  cameraShake: {fileID: 1173719167}
-  floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
-  canvasTransform: {fileID: 910889502}
---- !u!4 &1288019318
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288019316}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -77.279686, y: 0.96781003, z: -6.014519}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1318837993
 GameObject:
   m_ObjectHideFlags: 0
@@ -7031,12 +7042,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -0.041445255, z: -2.2098274, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1580008817}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1580008817
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7093,7 +7104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2834272415668104106, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       propertyPath: m_TagString
-      value: Fan
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6119169842923383527, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       propertyPath: m_LocalScale.x
@@ -7147,6 +7158,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8950214009942451982, guid: e190d9b32ea3949fea86907636d15821, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7154,9 +7169,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2834272415668104106, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       insertIndex: -1
       addedObject: {fileID: 375325225}
-    - targetCorrespondingSourceObject: {fileID: 2834272415668104106, guid: e190d9b32ea3949fea86907636d15821, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 375325230}
   m_SourcePrefab: {fileID: 100100000, guid: e190d9b32ea3949fea86907636d15821, type: 3}
 --- !u!4 &1647327962 stripped
 Transform:
@@ -7610,13 +7622,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 535347980}
     m_Modifications:
+    - target: {fileID: 504460696120954903, guid: 047b54e070a894e948bccc89029611a8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6473799645543960201, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: m_Name
       value: LV1_RightGate
       objectReference: {fileID: 0}
     - target: {fileID: 6473799645543960201, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: m_TagString
-      value: Gate
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7473549627322288431, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7665,12 +7681,13 @@ PrefabInstance:
     - target: {fileID: 8602987186855511053, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: obstacleManager
       value: 
-      objectReference: {fileID: 1288019317}
+      objectReference: {fileID: 0}
     - target: {fileID: 8602987186855511053, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1427345380}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8602987186855511053, guid: 047b54e070a894e948bccc89029611a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7693,13 +7710,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1875023660}
     m_Modifications:
+    - target: {fileID: 504460696120954903, guid: 047b54e070a894e948bccc89029611a8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6473799645543960201, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: m_Name
       value: LV1_RightGate
       objectReference: {fileID: 0}
     - target: {fileID: 6473799645543960201, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: m_TagString
-      value: Gate
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7473549627322288431, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7748,12 +7769,13 @@ PrefabInstance:
     - target: {fileID: 8602987186855511053, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: obstacleManager
       value: 
-      objectReference: {fileID: 1288019317}
+      objectReference: {fileID: 2045301453}
     - target: {fileID: 8602987186855511053, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1427345380}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8602987186855511053, guid: 047b54e070a894e948bccc89029611a8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7785,22 +7807,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f421ce16889472986be76501d52a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1873152662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873152656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 1427345380}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &1875023659
 GameObject:
   m_ObjectHideFlags: 0
@@ -7810,9 +7816,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1875023660}
+  - component: {fileID: 1875023662}
+  - component: {fileID: 1875023661}
   m_Layer: 0
   m_Name: Gate1
-  m_TagString: Untagged
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7836,6 +7844,42 @@ Transform:
   - {fileID: 1541975128}
   m_Father: {fileID: 392536847}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1875023661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875023659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f639d77ede74d5582d95fdc5d3c8a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 1427345380}
+  obstacleManager: {fileID: 2045301453}
+  cameraShake: {fileID: 1173719167}
+--- !u!65 &1875023662
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875023659}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0807114, y: 3.8058672, z: 4.9403796}
+  m_Center: {x: -9.98624, y: 2.0860581, z: 0.40996766}
 --- !u!1 &1883954984
 GameObject:
   m_ObjectHideFlags: 0
@@ -8070,7 +8114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2834272415668104106, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       propertyPath: m_TagString
-      value: Fan
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6119169842923383527, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       propertyPath: m_LocalScale.x
@@ -8124,6 +8168,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8950214009942451982, guid: e190d9b32ea3949fea86907636d15821, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8131,9 +8179,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2834272415668104106, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1873152657}
-    - targetCorrespondingSourceObject: {fileID: 2834272415668104106, guid: e190d9b32ea3949fea86907636d15821, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1873152662}
   m_SourcePrefab: {fileID: 100100000, guid: e190d9b32ea3949fea86907636d15821, type: 3}
 --- !u!4 &1893638692 stripped
 Transform:
@@ -8305,28 +8350,13 @@ GameObject:
   - component: {fileID: 1986849927}
   - component: {fileID: 1986849926}
   - component: {fileID: 1986849925}
-  - component: {fileID: 1986849924}
   m_Layer: 0
   m_Name: LV1_LeftGate
-  m_TagString: Gate
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1986849924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986849923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27f639d77ede74d5582d95fdc5d3c8a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 1427345380}
-  obstacleManager: {fileID: 1288019317}
 --- !u!65 &1986849925
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8344,7 +8374,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -8536,12 +8566,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -0.041445255, z: 18.50799, w: 3.5435839}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1999700956}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1999700956
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8920,8 +8950,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1427345380}
   cameraShake: {fileID: 1173719167}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
+  floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
+  canvasTransform: {fileID: 910889502}
 --- !u!4 &2045301454
 Transform:
   m_ObjectHideFlags: 0
@@ -9490,7 +9520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2834272415668104106, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       propertyPath: m_TagString
-      value: Fan
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6119169842923383527, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       propertyPath: m_LocalScale.x
@@ -9544,6 +9574,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8950214009942451982, guid: e190d9b32ea3949fea86907636d15821, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9551,9 +9585,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2834272415668104106, guid: e190d9b32ea3949fea86907636d15821, type: 3}
       insertIndex: -1
       addedObject: {fileID: 328557947}
-    - targetCorrespondingSourceObject: {fileID: 2834272415668104106, guid: e190d9b32ea3949fea86907636d15821, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 328557952}
   m_SourcePrefab: {fileID: 100100000, guid: e190d9b32ea3949fea86907636d15821, type: 3}
 --- !u!4 &1568017458399108045 stripped
 Transform:
@@ -9579,5 +9610,4 @@ SceneRoots:
   - {fileID: 1448748438}
   - {fileID: 2045301454}
   - {fileID: 910889502}
-  - {fileID: 1288019318}
   - {fileID: 1510001971}

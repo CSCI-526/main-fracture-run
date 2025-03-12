@@ -12,11 +12,21 @@ public class GateController : MonoBehaviour
 
     private Vector3 leftGateTarget;
     private Vector3 rightGateTarget;
+    private Transform gateParent;
+    private BoxCollider gateCollider;
+    private Transform arrow;
 
 
     // Start is called before the first frame update
     void Start()
     {    
+        gateParent = transform.parent;
+        gateCollider = gateParent.GetComponent<BoxCollider>();
+        arrow = gateParent.Find("Arrow");
+        if (arrow == null)
+        {
+            Debug.LogError("Arrow not found in the gate!");
+        }
         leftGateTarget = left_gate.transform.position + new Vector3(0, 0, -openDistance);
         rightGateTarget = right_gate.transform.position + new Vector3(0, 0, openDistance);
     }
@@ -27,7 +37,18 @@ public class GateController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ball"))
         {
             // Destroy the obstacle.
+            if (arrow != null)
+            {
+                Debug.Log("Destroy Arrow");
+                Destroy(arrow.gameObject);
+            }
+            if (gateCollider != null) 
+            {
+                Debug.Log("Disable Gate Collider");
+                gateCollider.enabled = false;
+            }
             Destroy(gameObject);
+
             // Open Gate
             left_gate.transform.position = leftGateTarget;
             right_gate.transform.position = rightGateTarget;
