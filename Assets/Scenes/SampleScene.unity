@@ -2003,7 +2003,7 @@ GameObject:
   - component: {fileID: 535347982}
   - component: {fileID: 535347981}
   m_Layer: 0
-  m_Name: Gate1 (1)
+  m_Name: Gate2
   m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2062,8 +2062,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.60495, y: 3.5747795, z: 4.707693}
+  m_Center: {x: -53.818665, y: 1.582838, z: -4.6895094}
 --- !u!1 &555487581
 GameObject:
   m_ObjectHideFlags: 0
@@ -9371,7 +9371,7 @@ GameObject:
   - component: {fileID: 2126855175}
   m_Layer: 0
   m_Name: GroundObstacles
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
