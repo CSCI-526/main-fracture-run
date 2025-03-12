@@ -76,6 +76,24 @@ public class Obstacle : MonoBehaviour
             Destroy(gameObject); // Remove the obstacle after penalty is applied
         }
 
+        if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Gate"))
+        {
+            if (playerController != null)
+            {
+                ShowFloatingText("-10");
+                playerController.ApplyPenalty(-10); // Call a penalty function in PlayerController
+            }
+            
+            
+            if (cameraShake != null)
+            {
+                Debug.Log("Shake the camera!");
+                cameraShake.Shake();
+            }
+
+            Destroy(gameObject); // Remove the obstacle after penalty is applied
+        }
+
         if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Fan"))
         {
             if (playerController != null)
