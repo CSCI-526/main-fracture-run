@@ -76,12 +76,30 @@ public class Obstacle : MonoBehaviour
             Destroy(gameObject); // Remove the obstacle after penalty is applied
         }
 
-        if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Gate"))
+        // if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Gate"))
+        // {
+        //     if (playerController != null)
+        //     {
+        //         ShowFloatingText("-10");
+        //         playerController.ApplyPenalty(-10); // Call a penalty function in PlayerController
+        //     }
+            
+            
+        //     if (cameraShake != null)
+        //     {
+        //         Debug.Log("Shake the camera!");
+        //         cameraShake.Shake();
+        //     }
+
+        //     Destroy(gameObject); // Remove the obstacle after penalty is applied
+        // }
+
+        if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Fan"))
         {
             if (playerController != null)
             {
-                ShowFloatingText("-10");
-                playerController.ApplyPenalty(-10); // Call a penalty function in PlayerController
+                ShowFloatingText("-5");
+                playerController.ApplyPenalty(-5); // Call a penalty function in PlayerController
             }
             
             
@@ -92,17 +110,7 @@ public class Obstacle : MonoBehaviour
             }
 
             Destroy(gameObject); // Remove the obstacle after penalty is applied
-        }
 
-        if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Fan"))
-        {
-            if (playerController != null)
-            {
-                //playerController.ShowGameOverWithDelay();
-                playerController.ShowGameOver();
-            }
-
-            Destroy(gameObject); // Remove the obstacle after penalty is applied
         } 
 
     }
