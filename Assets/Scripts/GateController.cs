@@ -44,7 +44,7 @@ public class GateController : MonoBehaviour
             }
             if (gateCollider != null) 
             {
-                Debug.Log("Disable Gate Collider");
+                Debug.Log("Disable Gate Collider of: " + gateParent.name);
                 gateCollider.enabled = false;
             }
             Destroy(gameObject);

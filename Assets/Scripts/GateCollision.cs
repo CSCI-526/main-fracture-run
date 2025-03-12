@@ -28,7 +28,7 @@ public class GateCollision : MonoBehaviour
 
             if (cameraShake != null)
             {
-                Debug.Log("Shake the camera when player hits the gate!");
+                Debug.Log("Shake the camera when player hits the gate: " + gameObject.name);
                 cameraShake.Shake();
             }
 
