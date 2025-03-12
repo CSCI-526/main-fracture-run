@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
         UpdateBallCountUI();
         gameOverText.gameObject.SetActive(false);
@@ -46,7 +45,6 @@ public class PlayerController : MonoBehaviour
         }
         Teleport(spawnTransform);
 
-
         //cameraShake = FindObjectOfType<CameraShake>();
         //if (cameraShake == null)
         //{
@@ -61,14 +59,15 @@ public class PlayerController : MonoBehaviour
         // game over
         float playerY = transform.position.y;
         if (playerY < gameOverY) {
-            
-            SceneManager.LoadScene("DeathScene"); 
+            SceneManager.LoadScene("DeathScene");
+            googleForm._scene = SceneManager.GetActiveScene().name;
             googleForm._gameOverReason = "fall";
             googleForm.Send();
         }
 
         if(ballCount == 0){
             SceneManager.LoadScene("DeathScene1");
+            googleForm._scene = SceneManager.GetActiveScene().name;
             googleForm._gameOverReason = "zeroball";
             googleForm.Send();
         }
@@ -177,6 +176,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Main"))
         {
             SceneManager.LoadScene("BeginScene"); // 切换到结算场景
+            googleForm._scene = SceneManager.GetActiveScene().name;
             googleForm._gameOverReason = "Success";
             googleForm.Send();
         }

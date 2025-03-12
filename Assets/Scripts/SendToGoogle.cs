@@ -12,6 +12,8 @@ public class SendToGoogle : MonoBehaviour
     private int _totalBalls;
     private int _hitObstaclesNums;
     private bool _hitGateKey;
+
+    public string _scene;
     public string _gameOverReason;
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,7 @@ public class SendToGoogle : MonoBehaviour
         _hitGateKey = false;
         //_gameOverReason = "fall";
 
-        StartCoroutine(Post(_sessionID.ToString(), _totalBalls.ToString(), _hitObstaclesNums.ToString(), _hitGateKey.ToString(), _gameOverReason.ToString()));
+        StartCoroutine(Post(_sessionID.ToString(), _scene.ToString(), _totalBalls.ToString(), _hitObstaclesNums.ToString(), _hitGateKey.ToString(), _gameOverReason.ToString()));
     }
 
     private void Awake() {
@@ -40,13 +42,14 @@ public class SendToGoogle : MonoBehaviour
         //Send();
     }
 
-    private IEnumerator Post(string sessionID, string totalBalls, string hitObstaclesNums, string hitGateKey, string gameOverReason) {
+    private IEnumerator Post(string sessionID, string scene, string totalBalls, string hitObstaclesNums, string hitGateKey, string gameOverReason) {
         WWWForm form = new WWWForm();
 
         // Debug.Log(sessionID);
         // Debug.Log(totalBalls);
-        // Debug.Log(hitObstaclesNums);
+        Debug.Log(scene);
         form.AddField("entry.1239619260", sessionID);
+        form.AddField("entry.1641318088", scene);
         form.AddField("entry.1827859925", totalBalls);
         form.AddField("entry.1032588362", hitObstaclesNums);
         form.AddField("entry.301892217", hitGateKey);
