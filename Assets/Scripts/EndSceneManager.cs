@@ -12,4 +12,9 @@ public class EndSceneManager : MonoBehaviour
     {
         SceneManager.LoadScene("TutorialScene"); 
     }
+
+    public void restart()
+    {
+        SceneManager.LoadScene("BeginScene");
+    }
 }
