@@ -45,7 +45,8 @@ public class SphereController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Crystal") 
         || collision.gameObject.CompareTag("Bonus")
-        || collision.gameObject.CompareTag("Obstacle"))
+        || collision.gameObject.CompareTag("Obstacle")
+        || collision.gameObject.CompareTag("Fan"))
         {
 
             //DestroySphere();
