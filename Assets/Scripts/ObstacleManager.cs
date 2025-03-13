@@ -32,6 +32,9 @@ public class Obstacle : MonoBehaviour
         {
             GameObject text = Instantiate(floatingTextPrefab, canvasTransform);
             text.GetComponent<TextMeshProUGUI>().text = point;
+            if(int.Parse(point) > 0) {
+                text.GetComponent<TextMeshProUGUI>().color = Color.green;
+            } 
         }
     }
 

@@ -2284,10 +2284,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
+  playerController: {fileID: 1427345380}
+  cameraShake: {fileID: 1173719167}
+  floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
+  canvasTransform: {fileID: 910889502}
 --- !u!1 &594403507
 GameObject:
   m_ObjectHideFlags: 0
@@ -6132,7 +6132,7 @@ MonoBehaviour:
   gameOverText: {fileID: 324082337}
   MovementText: {fileID: 1511138358}
   clickText: {fileID: 981475126}
-  googleForm: {fileID: 0}
+  googleForm: {fileID: 1510001970}
 --- !u!65 &1427345381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6295,8 +6295,8 @@ Transform:
   m_GameObject: {fileID: 1448748435}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -110.27, y: 0.89, z: -4.37}
-  m_LocalScale: {x: 1, y: 1.9601, z: 3.4088}
+  m_LocalPosition: {x: -111.68, y: -0.66, z: -4.37}
+  m_LocalScale: {x: 1, y: 1.6110069, z: 3.4088}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -6550,6 +6550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   URL: https://docs.google.com/forms/u/1/d/1EAKgWbzCpNg-Qxu994PNUBkElZcFW7jPe2xRx_NbwY0/formResponse
+  _scene: 
   _gameOverReason: 
 --- !u!4 &1510001971
 Transform:
