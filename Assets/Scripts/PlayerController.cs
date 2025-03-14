@@ -53,6 +53,17 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    private void BallCountCheck()
+    {
+        if (ballCount == 0)
+        {
+            SceneManager.LoadScene("DeathScene1");
+            googleForm._scene = SceneManager.GetActiveScene().name;
+            googleForm._gameOverReason = "zeroball";
+            googleForm.Send();
+        }
+    }
+
 
     private void Update() 
     {
@@ -65,12 +76,17 @@ public class PlayerController : MonoBehaviour
             googleForm.Send();
         }
 
-        if(ballCount == 0){
-            SceneManager.LoadScene("DeathScene1");
-            googleForm._scene = SceneManager.GetActiveScene().name;
-            googleForm._gameOverReason = "zeroball";
-            googleForm.Send();
+        if (ballCount == 0)
+        {
+            Invoke("BallCountCheck", 2f);
         }
+
+        // if(ballCount == 0){
+        //     SceneManager.LoadScene("DeathScene1");
+        //     googleForm._scene = SceneManager.GetActiveScene().name;
+        //     googleForm._gameOverReason = "zeroball";
+        //     googleForm.Send();
+        // }
 
         if(playerY < gameOverY || ballCount == 0) {
             ShowGameOverWithDelay();
