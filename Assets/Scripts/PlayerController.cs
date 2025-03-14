@@ -88,15 +88,15 @@ public class PlayerController : MonoBehaviour
         //     googleForm.Send();
         // }
 
-        if(playerY < gameOverY || ballCount == 0) {
-            ShowGameOverWithDelay();
-        }
+        // if(playerY < gameOverY || ballCount == 0) {
+        //     ShowGameOverWithDelay();
+        // }
 
         // restart game
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            RestartGame();
-        }
+        // if (Input.GetKeyDown(KeyCode.R))
+        // {
+        //     RestartGame();
+        // }
 
         if(transform.position.x > -20f) {
             MovementText.gameObject.SetActive(true);
