@@ -3017,7 +3017,7 @@ GameObject:
   - component: {fileID: 1038177550}
   m_Layer: 0
   m_Name: LV1_LeftGate
-  m_TagString: Obstacle
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5399,7 +5399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6473799645543960201, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: m_TagString
-      value: Obstacle
+      value: Gate
       objectReference: {fileID: 0}
     - target: {fileID: 7473549627322288431, guid: 047b54e070a894e948bccc89029611a8, type: 3}
       propertyPath: m_LocalPosition.x
