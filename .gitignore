@@ -5,7 +5,7 @@
 [Bb]uilds/
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
-Assets/Analytics/myenv/firebase_credentials.json
+Assets/Analytics/myenv/firebase-credentials.json
 
 
 .vscode/
