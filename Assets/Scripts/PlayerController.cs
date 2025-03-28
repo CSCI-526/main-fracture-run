@@ -16,9 +16,6 @@ public class PlayerController : MonoBehaviour
     public TMP_Text gameOverText;
     private float gameOverY = -3.0f; // when player z value is smaller than -1 ----> game over
 
-    public TMP_Text MovementText;
-    public TMP_Text clickText;
-
     public SendToGoogle googleForm;
 
     private Rigidbody rb; // Reference to player's Rigidbody.
@@ -31,13 +28,13 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
         UpdateBallCountUI();
         gameOverText.gameObject.SetActive(false);
-        clickText.gameObject.SetActive(false);
 
 
         GameObject spawnPoint = GameObject.FindGameObjectWithTag("Respawn");
         if (spawnPoint != null)
         {
             spawnTransform = spawnPoint.transform; // Access the spawn point's transform.
+            Debug.Log("Spawn point found at: " + spawnTransform.position);
         }
         else
         {
@@ -98,19 +95,6 @@ public class PlayerController : MonoBehaviour
         //     RestartGame();
         // }
 
-        if(transform.position.x > -20f) {
-            MovementText.gameObject.SetActive(true);
-            clickText.gameObject.SetActive(false);
-        }
-
-        if(transform.position.x < -20f) {
-            MovementText.gameObject.SetActive(false);
-            clickText.gameObject.SetActive(true);
-        }
-
-        if(transform.position.x < -40f) {
-            clickText.gameObject.SetActive(false);
-        }
     }
 
     // Add to the ball count.
