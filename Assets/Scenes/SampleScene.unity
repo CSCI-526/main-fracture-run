@@ -7619,6 +7619,14 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1427345380}
+    - target: {fileID: 324667294549648753, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 452862388862517025, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.27
+      objectReference: {fileID: 0}
     - target: {fileID: 566042291089651404, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
       propertyPath: canvasTransform
       value: 
@@ -7635,6 +7643,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1427345380}
+    - target: {fileID: 1348531397969474136, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 1515103010814780233, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
       propertyPath: canvasTransform
       value: 
@@ -7643,6 +7655,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1427345380}
+    - target: {fileID: 1587514886336086182, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.73
+      objectReference: {fileID: 0}
     - target: {fileID: 1975642212830515194, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
       propertyPath: canvasTransform
       value: 
@@ -7703,6 +7719,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1427345380}
+    - target: {fileID: 3957436311484956477, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.67
+      objectReference: {fileID: 0}
     - target: {fileID: 4248215081623233773, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
       propertyPath: cameraShake
       value: 
@@ -7811,6 +7831,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1427345380}
+    - target: {fileID: 6219325824471263545, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.77
+      objectReference: {fileID: 0}
     - target: {fileID: 6336699908761088115, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
       propertyPath: cameraShake
       value: 
@@ -7835,6 +7859,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1427345380}
+    - target: {fileID: 7193476086297782060, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.82
+      objectReference: {fileID: 0}
     - target: {fileID: 7313223332912508033, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
       propertyPath: cameraShake
       value: 
@@ -7867,6 +7895,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1427345380}
+    - target: {fileID: 8064264885408517270, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 8166198401029160610, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
       propertyPath: cameraShake
       value: 
@@ -7887,6 +7919,14 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1427345380}
+    - target: {fileID: 8340435264284958958, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422135156961042155, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.17
+      objectReference: {fileID: 0}
     - target: {fileID: 8425931114857189211, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
       propertyPath: cameraShake
       value: 
@@ -7899,6 +7939,14 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1427345380}
+    - target: {fileID: 8573066753347955787, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682836686629662731, guid: 10c88829a276a7010af794ebdeaab693, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
