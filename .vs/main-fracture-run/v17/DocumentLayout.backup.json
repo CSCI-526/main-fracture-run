@@ -7,20 +7,12 @@
       "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\laserwallcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|c:\\users\\tyler\\desktop\\526\\main-fracture-run\\assets\\scripts\\laserwallspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\laserwallspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\assets\\scripts\\laserdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\laserdamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\tyler\\desktop\\526\\main-fracture-run\\assets\\scripts\\rotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\rotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\Assets\\Scripts\\Rotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Rotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\assets\\scripts\\throwsphere.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +21,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\assets\\scripts\\spherecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spherecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\Assets\\Scripts\\LaserDamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\LaserDamage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\Assets\\Scripts\\LaserWallSpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\LaserWallSpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,14 +48,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\LaserWallController.cs",
               "ToolTip": "C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\Assets\\Scripts\\LaserWallController.cs",
               "RelativeToolTip": "Assets\\Scripts\\LaserWallController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T21:48:01.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "LaserWallSpawner.cs",
               "DocumentMoniker": "C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\Assets\\Scripts\\LaserWallSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LaserWallSpawner.cs",
@@ -68,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "LaserDamage.cs",
               "DocumentMoniker": "C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\Assets\\Scripts\\LaserDamage.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LaserDamage.cs",
@@ -76,11 +76,12 @@
               "RelativeToolTip": "Assets\\Scripts\\LaserDamage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T20:41:13.869Z"
+              "WhenOpened": "2025-03-27T20:41:13.869Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Rotator.cs",
               "DocumentMoniker": "C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\Assets\\Scripts\\Rotator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Rotator.cs",
@@ -92,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "SphereController.cs",
               "DocumentMoniker": "C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\Assets\\Scripts\\SphereController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SphereController.cs",
@@ -104,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "ThrowSphere.cs",
               "DocumentMoniker": "C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\Assets\\Scripts\\ThrowSphere.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ThrowSphere.cs",
@@ -116,7 +117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
