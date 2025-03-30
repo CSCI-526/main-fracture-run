@@ -11,6 +11,8 @@ TagManager:
   - Ground
   - Fan
   - Main
+  - Gate
+  - Laser
   layers:
   - Default
   - TransparentFX
