@@ -165,12 +165,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -0.041445255, z: -2.2098274, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 3137369528526526649}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!1 &1197254332424621067
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,12 +715,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: -0.041445255, z: -2.2098274, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 4667260896317872233}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!1 &6216489158176182981
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,7 +934,7 @@ Transform:
   m_GameObject: {fileID: 7720656359254404135}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -123.19765, y: 10.060778, z: 7.506413}
+  m_LocalPosition: {x: -223.1976, y: 10.060778, z: 7.506413}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
