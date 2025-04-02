@@ -7,7 +7,7 @@ public class ObjectSpawner : MonoBehaviour
     public float spawnDistance = 10f; // Distance to trigger next spawn
     public PlayerController playerController; // Reference to PlayerController
     public Transform canvasTransform; 
-    private GameObject currPrefab;
+    public GameObject currPrefab;
 
     private GameObject prevPrefab;
     private GameObject[] objectPrefabs;

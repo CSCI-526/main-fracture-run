@@ -9,31 +9,22 @@ public class SendToGoogle : MonoBehaviour
     [SerializeField]private string URL;
 
     private long _sessionID;
-    private int _totalBalls;
+    
     private int _hitObstaclesNums;
     private bool _hitGateKey;
 
     public string _scene;
     public string _gameOverReason;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int _totalBalls;
+    public float _distance;
 
     public void Send() {
-        _totalBalls = 12;
+        //_totalBalls = 12;
         _hitObstaclesNums = 0;
         _hitGateKey = false;
         //_gameOverReason = "fall";
 
-        StartCoroutine(Post(_sessionID.ToString(), _scene.ToString(), _totalBalls.ToString(), _hitObstaclesNums.ToString(), _hitGateKey.ToString(), _gameOverReason.ToString()));
+        StartCoroutine(Post(_sessionID.ToString(), _scene.ToString(), _totalBalls.ToString(), _hitObstaclesNums.ToString(), _hitGateKey.ToString(), _gameOverReason.ToString(), _distance.ToString()));
     }
 
     private void Awake() {
@@ -42,7 +33,7 @@ public class SendToGoogle : MonoBehaviour
         //Send();
     }
 
-    private IEnumerator Post(string sessionID, string scene, string totalBalls, string hitObstaclesNums, string hitGateKey, string gameOverReason) {
+    private IEnumerator Post(string sessionID, string scene, string totalBalls, string hitObstaclesNums, string hitGateKey, string gameOverReason, string distance) {
         WWWForm form = new WWWForm();
 
         // Debug.Log(sessionID);
@@ -54,6 +45,7 @@ public class SendToGoogle : MonoBehaviour
         form.AddField("entry.1032588362", hitObstaclesNums);
         form.AddField("entry.301892217", hitGateKey);
         form.AddField("entry.204214296", gameOverReason);
+        form.AddField("entry.996612829", distance);
 
 
         using (UnityWebRequest www = UnityWebRequest.Post(URL, form)) {
