@@ -17,14 +17,10 @@ public class PlayerController : MonoBehaviour
     private float gameOverY = -3.0f; // when player z value is smaller than -1 ----> game over
 
     public SendToGoogle googleForm;
-    public ObjectSpawner objectSpawner;
 
     private Rigidbody rb; // Reference to player's Rigidbody.
     private Transform spawnTransform; // Reference to the spawn point.
-    private bool BallCountCheckFlag = true;
-    private float start_position;
     
-    private float current_position;
 
     // Start is called before the first frame update
     private void Start()
@@ -32,8 +28,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
         UpdateBallCountUI();
         gameOverText.gameObject.SetActive(false);
-        googleForm._scene = "Start_Scene";
-        start_position = 0;
+
 
         GameObject spawnPoint = GameObject.FindGameObjectWithTag("Respawn");
         if (spawnPoint != null)
@@ -57,17 +52,12 @@ public class PlayerController : MonoBehaviour
 
     private void BallCountCheck()
     {
-        if (ballCount == 0 && BallCountCheckFlag)
+        if (ballCount == 0)
         {
             SceneManager.LoadScene("DeathScene1");
-            if(objectSpawner.currPrefab != null)
-                googleForm._scene = objectSpawner.currPrefab.name;
+            googleForm._scene = SceneManager.GetActiveScene().name;
             googleForm._gameOverReason = "zeroball";
-            googleForm._totalBalls = ballCount;
-            current_position = transform.position.x;
-            googleForm._distance = -(current_position - start_position);
             googleForm.Send();
-            BallCountCheckFlag = false;
         }
     }
 
@@ -78,19 +68,14 @@ public class PlayerController : MonoBehaviour
         float playerY = transform.position.y;
         if (playerY < gameOverY) {
             SceneManager.LoadScene("DeathScene");
-            if(objectSpawner.currPrefab != null)
-                googleForm._scene = objectSpawner.currPrefab.name;
+            googleForm._scene = SceneManager.GetActiveScene().name;
             googleForm._gameOverReason = "fall";
-            googleForm._totalBalls = ballCount;
-            current_position = transform.position.x;
-            googleForm._distance = -(current_position - start_position);
             googleForm.Send();
         }
 
         if (ballCount == 0)
         {
             Invoke("BallCountCheck", 2f);
-            //BallCountCheck();
         }
 
         // if(ballCount == 0){
