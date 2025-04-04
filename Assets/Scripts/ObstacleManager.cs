@@ -55,7 +55,8 @@ public class Obstacle : MonoBehaviour
                 Debug.LogError("BoxCollider not found in the obstacle!");
             }
             // Destroy the obstacle.
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
 
             if (gameObject.CompareTag("Crystal") && playerController != null)
             {
@@ -89,7 +90,8 @@ public class Obstacle : MonoBehaviour
                 cameraShake.Shake();
             }
 
-            Destroy(gameObject); // Remove the obstacle after penalty is applied
+            //Destroy(gameObject); // Remove the obstacle after penalty is applied
+            gameObject.SetActive(false);
         }
 
         if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Fan"))
@@ -110,7 +112,8 @@ public class Obstacle : MonoBehaviour
                     cameraShake.Shake();
                 }
 
-                Destroy(gameObject); // Remove the obstacle after penalty is applied
+                //Destroy(gameObject); // Remove the obstacle after penalty is applied
+                gameObject.SetActive(false); // Deactivate the Fan instead of destroying it
             }
 
         } 

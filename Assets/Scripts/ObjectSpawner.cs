@@ -106,6 +106,7 @@ public class ObjectSpawner : MonoBehaviour
 
         currPrefab.transform.position = spawnPosition + offset;
         currPrefab.SetActive(true);
+        SetAllChildrenActive(currPrefab.transform, true);
     
         Obstacle[] obstacles = currPrefab.GetComponentsInChildren<Obstacle>();
         foreach (Obstacle obstacle in obstacles)
@@ -125,29 +126,7 @@ public class ObjectSpawner : MonoBehaviour
         {
             index = n - 1;
         }
-/*
-        GameObject randomPrefab = objectPrefabs[Random.Range(0, objectPrefabs.Length)];
-        GameObject newObject = Instantiate(randomPrefab, spawnPosition, Quaternion.identity);
 
-        Transform startCube = newObject.transform.Find("StartCube");
-        if (startCube != null)
-        {
-            Vector3 offset = newObject.transform.position - startCube.transform.position;
-            newObject.transform.position = spawnPosition + offset;
-        }
-
-    
-        Obstacle[] obstacles = newObject.GetComponentsInChildren<Obstacle>();
-        foreach (Obstacle obstacle in obstacles)
-        {
-            obstacle.playerController = playerController;
-            obstacle.canvasTransform = canvasTransform; // 赋值 Canvas Transform
-            Debug.Log($"Assigned PlayerController to {obstacle.gameObject.name}");
-        }
-
-        lastSpawnedObject = newObject;
-        Debug.Log($"Object spawned: {randomPrefab.name} at {spawnPosition}");
-*/
     }
 
     private void swap(GameObject[] arr, int i, int j)
@@ -157,23 +136,14 @@ public class ObjectSpawner : MonoBehaviour
         arr[j] = temp;
     }
 
-    private float GetPrefabLength(GameObject prefab)
-{
-    Renderer[] renderers = prefab.GetComponentsInChildren<Renderer>();
-    if (renderers.Length == 0)
+    private void SetAllChildrenActive(Transform parent, bool isActive)
     {
-        Debug.LogError($"No Renderer found in {prefab.name}");
-        return 0;
+        foreach (Transform child in parent)
+        {
+            child.gameObject.SetActive(isActive);
+            // Recursively activate children
+            SetAllChildrenActive(child, isActive);
+        }
     }
-
-    // Calculate the total bounding box that includes all renderers
-    Bounds totalBounds = renderers[0].bounds;
-    foreach (Renderer renderer in renderers)
-    {
-        totalBounds.Encapsulate(renderer.bounds);
-    }
-
-    return totalBounds.size.x; // The full length in the X direction
-}
 
 }

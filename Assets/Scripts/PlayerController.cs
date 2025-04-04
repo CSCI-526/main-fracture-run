@@ -149,6 +149,17 @@ public class PlayerController : MonoBehaviour
         if (ballCountText != null)
         {
             ballCountText.text = "Total Balls: " + ballCount;
+            if (ballCount < 5)
+            {
+                ballCountText.color = Color.red;
+                ballCountText.fontSize = 84; 
+            }
+            else
+            {
+
+                ballCountText.color = Color.white;
+                ballCountText.fontSize = 64; 
+            }
         }
         else
         {
@@ -182,7 +193,7 @@ public class PlayerController : MonoBehaviour
     public void ApplyPenalty(int change_score)
     {
         ballCount = Mathf.Max(0, ballCount + change_score);
-        ballCountText.text = "Total Balls: " + ballCount;// Example: Reduce 2 balls, but not below 0
+        UpdateBallCountUI();
     }
 
 
