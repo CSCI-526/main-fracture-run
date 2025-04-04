@@ -16,34 +16,27 @@ public class ObjectSpawner : MonoBehaviour
     private Vector3 offset;
     private bool isSpawning = false;
     private int index;
+    private int poolSize;
     
 
 
     void Start()
     {
-        // Spawn the first object at the initial position
-        // if (objectPrefab != null)
-        // {
-        //     lastSpawnedObject = Instantiate(objectPrefab, transform.position, Quaternion.identity);
-        // }
-        // else
-        // {
-        //     Debug.LogError("Prefab is not assigned!");
-        // }
         endCube = GameObject.Find("EndCube").transform;
         objectPrefabs = Resources.LoadAll<GameObject>("GameScenes");
-        if (objectPrefabs.Length == 0)
+        poolSize = objectPrefabs.Length;
+        if (poolSize == 0)
         {
             Debug.LogError("No prefabs found in Resources/GameScenes!");
             return;
         }
-        index = objectPrefabs.Length - 1;
+        index = poolSize - 1;
 
-        for (int i = 0; i < objectPrefabs.Length; i++)
+        for (int i = 0; i < poolSize; i++)
         {
             objectPrefabs[i] = Instantiate(objectPrefabs[i]);
             objectPrefabs[i].SetActive(false);
-            Debug.Log($"Prefab {objectPrefabs[i]} instantiated at {objectPrefabs[i].transform.position}");
+            Debug.Log($"Start: Prefab {objectPrefabs[i]} instantiated at {objectPrefabs[i].transform.position}");
         }
     }
 
@@ -64,7 +57,7 @@ public class ObjectSpawner : MonoBehaviour
             isSpawning = false;
         }
 
-        if (prevPrefab != null && player.transform.position.x < startCube.position.x)
+        if (prevPrefab != null && player.transform.position.x < startCube.position.x && currPrefab != prevPrefab)
         {
             prevPrefab.SetActive(false);
         }
@@ -74,9 +67,8 @@ public class ObjectSpawner : MonoBehaviour
     {
         Debug.Log("Call SpawnObject method");
         isSpawning = true;
-        int n = objectPrefabs.Length;
 
-        if (n == 0)
+        if (poolSize == 0)
         {
             Debug.LogError("No prefabs available for spawning!");
             return;
@@ -124,7 +116,7 @@ public class ObjectSpawner : MonoBehaviour
         }
         else
         {
-            index = n - 1;
+            index = poolSize - 1;
         }
 
     }
@@ -141,6 +133,7 @@ public class ObjectSpawner : MonoBehaviour
         foreach (Transform child in parent)
         {
             child.gameObject.SetActive(isActive);
+            Debug.Log($"Set {child.gameObject.name} active: {isActive}");
             // Recursively activate children
             SetAllChildrenActive(child, isActive);
         }

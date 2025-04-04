@@ -47,7 +47,8 @@ public class GateController : MonoBehaviour
                 Debug.Log("Disable Gate Collider of: " + gateParent.name);
                 gateCollider.enabled = false;
             }
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
 
             // Open Gate
             left_gate.transform.position = leftGateTarget;

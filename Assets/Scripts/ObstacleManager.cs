@@ -72,6 +72,7 @@ public class Obstacle : MonoBehaviour
 
             // Destroy both Crystals & Obstacles when hit
             //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         
         if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Obstacle"))
