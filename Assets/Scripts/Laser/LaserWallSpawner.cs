@@ -20,6 +20,21 @@ public class LaserWallSpawner : MonoBehaviour
 
             Vector3 spawnPos = transform.position + localOffset;
             GameObject wall = Instantiate(laserWallPrefab, spawnPos, Quaternion.identity);
+
+            // ✅ 自动为所有 Obstacle 脚本赋值 playerController 引用
+            PlayerController player = GameObject.FindWithTag("Player")?.GetComponent<PlayerController>();
+            if (player != null)
+            {
+                foreach (Obstacle obstacle in wall.GetComponentsInChildren<Obstacle>())
+                {
+                    obstacle.playerController = player;
+                }
+            }
+            else
+            {
+                Debug.LogError("Player with tag 'Player' not found!");
+            }
+
             StartCoroutine(MoveAndDestroy(wall));
         }
     }
