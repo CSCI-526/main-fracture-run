@@ -57,7 +57,7 @@ public class ObjectSpawner : MonoBehaviour
             isSpawning = false;
         }
 
-        if (prevPrefab != null && player.transform.position.x < startCube.position.x && poolSize > 1)
+        if (prevPrefab != null && player.transform.position.x < startCube.position.x && currPrefab != prevPrefab)
         {
             prevPrefab.SetActive(false);
         }
@@ -133,6 +133,7 @@ public class ObjectSpawner : MonoBehaviour
         foreach (Transform child in parent)
         {
             child.gameObject.SetActive(isActive);
+            Debug.Log($"Set {child.gameObject.name} active: {isActive}");
             // Recursively activate children
             SetAllChildrenActive(child, isActive);
         }
