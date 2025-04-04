@@ -26,7 +26,10 @@ public class LaserWallController : MonoBehaviour
         for (int i = 0; i < total; i++)
         {
             bool isGap = System.Array.IndexOf(gapIndices, i) != -1;
-            laserBeams[i].gameObject.SetActive(!isGap);
+            
+            MeshRenderer mr = laserBeams[i].GetComponent<MeshRenderer>();
+            if (mr != null)
+                mr.enabled = !isGap;
         }
     }
 }

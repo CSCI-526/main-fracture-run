@@ -625,6 +625,7 @@ MonoBehaviour:
   ballCountText: {fileID: 831681861}
   gameOverText: {fileID: 1034603307}
   googleForm: {fileID: 1673888772}
+  objectSpawner: {fileID: 0}
 --- !u!4 &234612732
 Transform:
   m_ObjectHideFlags: 0
@@ -2203,6 +2204,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923997412}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &982773929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 982773931}
+  - component: {fileID: 982773930}
+  m_Layer: 0
+  m_Name: LaserWallSpawnerObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &982773930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982773929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd7b11901d02f340a8bc077fc9daa23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserWallPrefab: {fileID: 5790630546785119959, guid: b7bfd006ad0d4104d9fb0cc20a166f26, type: 3}
+  localOffset: {x: 5, y: 0, z: 0}
+  spawnInterval: 3
+  moveSpeed: 5
+  lifeTime: 7
+--- !u!4 &982773931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982773929}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.23, y: 8.37, z: 2.413}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &986488366
 GameObject:
   m_ObjectHideFlags: 0
@@ -3798,6 +3848,8 @@ MonoBehaviour:
   URL: https://docs.google.com/forms/u/1/d/1EAKgWbzCpNg-Qxu994PNUBkElZcFW7jPe2xRx_NbwY0/formResponse
   _scene: 
   _gameOverReason: 
+  _totalBalls: 0
+  _distance: 0
 --- !u!4 &1673888773
 Transform:
   m_ObjectHideFlags: 0
@@ -5576,3 +5628,4 @@ SceneRoots:
   - {fileID: 194470889}
   - {fileID: 1673888773}
   - {fileID: 260941924}
+  - {fileID: 982773931}

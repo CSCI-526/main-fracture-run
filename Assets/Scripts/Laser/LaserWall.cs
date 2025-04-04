@@ -2,16 +2,28 @@ using UnityEngine;
 
 public class LaserWall : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+
+   private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        Debug.Log("[DEBUG] Triggered with: " + other.name + " | Tag: " + other.tag);
+
+        if (!other.CompareTag("Player"))
         {
-            PlayerController player = other.GetComponent<PlayerController>();
-            if (player != null)
-            {
-                player.ApplyPenalty(-5); // 扣5个 ball
-                Debug.Log("Laser hit! -5 balls");
-            }
+            Debug.Log("[DEBUG] Not the player, skip.");
+            return;
+        }
+
+        PlayerController player = other.GetComponent<PlayerController>() ?? other.GetComponentInParent<PlayerController>();
+        if (player != null)
+        {
+            player.ApplyPenalty(-5);
+            Debug.Log("✅ Laser hit REAL player: -5 balls");
+        }
+        else
+        {
+            Debug.Log("❌ PlayerController NOT found on: " + other.name);
         }
     }
+
+
 }

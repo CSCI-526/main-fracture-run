@@ -4589,7 +4589,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!1 &1465441935
 GameObject:
@@ -4725,6 +4725,8 @@ MonoBehaviour:
   URL: https://docs.google.com/forms/u/1/d/1EAKgWbzCpNg-Qxu994PNUBkElZcFW7jPe2xRx_NbwY0/formResponse
   _scene: 
   _gameOverReason: 
+  _totalBalls: 0
+  _distance: 0
 --- !u!4 &1510001971
 Transform:
   m_ObjectHideFlags: 0
