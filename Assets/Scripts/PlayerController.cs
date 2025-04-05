@@ -26,11 +26,18 @@ public class PlayerController : MonoBehaviour
     
     private float current_position;
 
+    public TMP_Text distanceText;
+    private float lastMessageDistance = 0f; // 上一次显示“Great!”的距离
+
+    public TMP_Text messageText;
     // Start is called before the first frame update
     private void Start()
     {
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
         UpdateBallCountUI();
+        UpdateDistanceUI();
+        messageText.text = ""; // 初始化文本为空
+        messageText.gameObject.SetActive(false); // 初始不显示
         gameOverText.gameObject.SetActive(false);
         googleForm._scene = "Start_Scene";
         start_position = 0;
@@ -92,6 +99,8 @@ public class PlayerController : MonoBehaviour
             Invoke("BallCountCheck", 2f);
             //BallCountCheck();
         }
+        UpdateDistanceUI();
+        CheckGreatMessage();
 
         // if(ballCount == 0){
         //     SceneManager.LoadScene("DeathScene1");
@@ -112,13 +121,91 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void UpdateDistanceUI()
+    {
+
+        if (distanceText != null)
+        {
+            current_position = transform.position.x;
+            float distanceTraveled = -(current_position - start_position);
+            distanceText.fontSize = 44;
+            distanceText.text = "Distance: " + distanceTraveled.ToString("F2") + " m";
+
+        }
+        else
+        {
+            Debug.LogError("Distance Count UI Text not assigned!");
+        }
+
+    }
+    private void CheckGreatMessage()
+    {
+        float distanceTraveled = -(current_position - start_position);
+        Debug.Log("distanceTraveled" + distanceTraveled+ "lastMessageDistance" + lastMessageDistance);
+
+        if (distanceTraveled >= lastMessageDistance + 200f)
+        {
+            StartCoroutine(ShowGreatMessage());
+            lastMessageDistance += 200f;
+            Debug.Log("lastMessageDistance"+ lastMessageDistance);
+        }
+    }
+
+    private IEnumerator ShowGreatMessage()
+    {
+        Debug.Log("ShowGreatMessage called");
+
+       
+        messageText.gameObject.SetActive(true); 
+        messageText.text = "Great!";
+        messageText.color = Color.green; 
+        messageText.transform.localScale = Vector3.one; 
+        messageText.color = new Color(messageText.color.r, messageText.color.g, messageText.color.b, 1f);
+
+        Vector3 originalPosition = messageText.transform.localPosition;
+        Vector3 targetPosition = originalPosition + new Vector3(0, 50, 0); 
+        Vector3 originalScale = messageText.transform.localScale;
+        Vector3 targetScale = originalScale * 2f; 
+
+        float duration = 1f; 
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            float t = elapsedTime / duration;
+            messageText.transform.localPosition = Vector3.Lerp(originalPosition, targetPosition, t);
+            messageText.transform.localScale = Vector3.Lerp(originalScale, targetScale, t);
+            elapsedTime += Time.deltaTime;
+            yield return null; 
+        }
+
+       
+        messageText.transform.localPosition = targetPosition;
+        messageText.transform.localScale = targetScale;
+
+       
+        yield return new WaitForSeconds(1f);
+
+        
+        for (float fadeOutTime = 0; fadeOutTime < 1; fadeOutTime += Time.deltaTime)
+        {
+            Color color = messageText.color;
+            color.a = Mathf.Lerp(1, 0, fadeOutTime); 
+            messageText.color = color;
+            yield return null; 
+        }
+
+        messageText.gameObject.SetActive(false); 
+    }
+
+
     // Add to the ball count.
     public void AddBallCount(int amount)
-    {
-        ballCount += amount;
-        Debug.Log("Ball count updated! Total balls: " + ballCount);
-        UpdateBallCountUI(); // Ensure the UI updates whenever the ball count changes
-    }
+        {
+            ballCount += amount;
+            Debug.Log("Ball count updated! Total balls: " + ballCount);
+            UpdateBallCountUI(); // Ensure the UI updates whenever the ball count changes
+        }
 
     // Handle physics-based movement and rotation.
     private void FixedUpdate()
@@ -152,13 +239,13 @@ public class PlayerController : MonoBehaviour
             if (ballCount < 5)
             {
                 ballCountText.color = Color.red;
-                ballCountText.fontSize = 84; 
+                ballCountText.fontSize = 104; 
             }
             else
             {
 
                 ballCountText.color = Color.white;
-                ballCountText.fontSize = 64; 
+                ballCountText.fontSize = 84; 
             }
         }
         else
