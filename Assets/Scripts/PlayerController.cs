@@ -91,6 +91,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update() 
     {
+        if (Time.timeScale == 0f) return;
         // game over
         float playerY = transform.position.y;
         if (playerY < gameOverY) {
