@@ -36,11 +36,21 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
         UpdateBallCountUI();
         UpdateDistanceUI();
-        messageText.text = ""; // 初始化文本为空
-        messageText.gameObject.SetActive(false); // 初始不显示
+        messageText.text = ""; 
+        messageText.gameObject.SetActive(false); 
         gameOverText.gameObject.SetActive(false);
         googleForm._scene = "Start_Scene";
         start_position = 0;
+
+        if (SceneManager.GetActiveScene().name == "SampleScene")
+        {
+            distanceText.gameObject.SetActive(true); // 禁用距离文本
+        }
+        else
+        {
+            distanceText.gameObject.SetActive(true); // 启用距离文本
+        }
+
 
         GameObject spawnPoint = GameObject.FindGameObjectWithTag("Respawn");
         if (spawnPoint != null)
@@ -134,26 +144,26 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Distance Count UI Text not assigned!");
+            //Debug.LogError("Distance Count UI Text not assigned!");
         }
 
     }
     private void CheckGreatMessage()
     {
         float distanceTraveled = -(current_position - start_position);
-        Debug.Log("distanceTraveled" + distanceTraveled+ "lastMessageDistance" + lastMessageDistance);
+        //Debug.Log("distanceTraveled" + distanceTraveled+ "lastMessageDistance" + lastMessageDistance);
 
         if (distanceTraveled >= lastMessageDistance + 200f)
         {
             StartCoroutine(ShowGreatMessage());
             lastMessageDistance += 200f;
-            Debug.Log("lastMessageDistance"+ lastMessageDistance);
+            //Debug.Log("lastMessageDistance"+ lastMessageDistance);
         }
     }
 
     private IEnumerator ShowGreatMessage()
     {
-        Debug.Log("ShowGreatMessage called");
+        //Debug.Log("ShowGreatMessage called");
 
        
         messageText.gameObject.SetActive(true); 

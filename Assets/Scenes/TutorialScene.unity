@@ -626,6 +626,8 @@ MonoBehaviour:
   gameOverText: {fileID: 1034603307}
   googleForm: {fileID: 1673888772}
   objectSpawner: {fileID: 0}
+  distanceText: {fileID: 0}
+  messageText: {fileID: 0}
 --- !u!4 &234612732
 Transform:
   m_ObjectHideFlags: 0
