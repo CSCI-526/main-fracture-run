@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ThrowSphere : MonoBehaviour
 {
@@ -11,29 +12,53 @@ public class ThrowSphere : MonoBehaviour
 
     public Obstacle obstacleManager;
 
+
+
     void Update()
     {
+        if (Time.timeScale == 0f) return;
+
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0)) 
         {
             obstacleManager.ShowFloatingText("-1");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //RaycastHit hit;
-            Vector3 targetPoint;
-
-            targetPoint = ray.GetPoint(50);
-            
-            // if (Physics.Raycast(ray, out hit))
-            // {
-            //     targetPoint = hit.point;
-            // } else {
-            //     targetPoint = ray.origin + ray.direction * 10f;
-            // }
-
-            //Vector3 targetPoint = ray.GetPoint(50);
+            Vector3 targetPoint = ray.GetPoint(50);
             Debug.Log("Throw!");
             Throw(targetPoint);
         }
     }
+
+
+    // void Update()
+    // {
+    //     if (Time.timeScale == 0f) return;
+
+    //     if (Input.GetMouseButtonDown(0)) 
+    //     {
+    //         obstacleManager.ShowFloatingText("-1");
+    //         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    //         //RaycastHit hit;
+    //         Vector3 targetPoint;
+
+    //         targetPoint = ray.GetPoint(50);
+            
+    //         // if (Physics.Raycast(ray, out hit))
+    //         // {
+    //         //     targetPoint = hit.point;
+    //         // } else {
+    //         //     targetPoint = ray.origin + ray.direction * 10f;
+    //         // }
+
+    //         //Vector3 targetPoint = ray.GetPoint(50);
+    //         Debug.Log("Throw!");
+    //         Throw(targetPoint);
+    //     }
+    // }
 
     void Throw(Vector3 targetPoint)
     {
