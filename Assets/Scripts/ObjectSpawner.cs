@@ -14,11 +14,8 @@ public class ObjectSpawner : MonoBehaviour
     private Transform startCube;
     private Transform endCube;
     private Vector3 offset;
-    private bool isSpawning = false;
     private int index;
     private int poolSize;
-    
-
 
     void Start()
     {
@@ -43,7 +40,7 @@ public class ObjectSpawner : MonoBehaviour
     void Update()
     {
         // Check if player is close to EndCube to spawn the next object (using x-axis)
-        if (!isSpawning && player.transform.position.x < endCube.transform.position.x + spawnDistance)
+        if (player.transform.position.x < endCube.transform.position.x + spawnDistance)
         {
             Debug.Log("endCube position: " + endCube.transform.position);
             //float endCubeLength = Mathf.Abs(endCube.GetComponent<Renderer>().bounds.size.x);
@@ -51,10 +48,6 @@ public class ObjectSpawner : MonoBehaviour
             Debug.Log("endCubeLength: " + endCubeLength);
             Vector3 spawnPosition = endCube.transform.position + new Vector3(-endCubeLength, 0, 0);
             SpawnObject(spawnPosition);
-        }
-        else if (player.transform.position.x >= endCube.transform.position.x + spawnDistance)
-        {
-            isSpawning = false;
         }
 
         if (prevPrefab != null && player.transform.position.x < startCube.position.x && currPrefab != prevPrefab)
@@ -66,7 +59,6 @@ public class ObjectSpawner : MonoBehaviour
     public void SpawnObject(Vector3 spawnPosition)
     {
         Debug.Log("Call SpawnObject method");
-        isSpawning = true;
 
         if (poolSize == 0)
         {
