@@ -28,13 +28,13 @@ public class ObjectSpawner : MonoBehaviour
             return;
         }
         index = poolSize - 1;
-
+/*
         for (int i = 0; i < poolSize; i++)
         {
             objectPrefabs[i] = Instantiate(objectPrefabs[i]);
             objectPrefabs[i].SetActive(false);
             Debug.Log($"Start: Prefab {objectPrefabs[i]} instantiated at {objectPrefabs[i].transform.position}");
-        }
+        }*/
     }
 
     void Update()
@@ -52,7 +52,8 @@ public class ObjectSpawner : MonoBehaviour
 
         if (prevPrefab != null && player.transform.position.x < startCube.position.x && currPrefab != prevPrefab)
         {
-            prevPrefab.SetActive(false);
+            //prevPrefab.SetActive(false);
+            Destroy(prevPrefab);
         }
     }
 
@@ -88,9 +89,10 @@ public class ObjectSpawner : MonoBehaviour
         offset = currPrefab.transform.position - startCube.transform.position;
         Debug.Log($"{currPrefab.name} offset: " + offset);
 
-        currPrefab.transform.position = spawnPosition + offset;
+        currPrefab.transform.position = spawnPosition + offset;/*
         currPrefab.SetActive(true);
-        SetAllChildrenActive(currPrefab.transform, true);
+        SetAllChildrenActive(currPrefab.transform, true);*/
+        currPrefab = Instantiate(currPrefab);
     
         Obstacle[] obstacles = currPrefab.GetComponentsInChildren<Obstacle>();
         foreach (Obstacle obstacle in obstacles)
