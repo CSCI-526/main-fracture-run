@@ -17,6 +17,13 @@ public class SendToGoogle : MonoBehaviour
     public string _gameOverReason;
     public int _totalBalls;
     public float _distance;
+    public string _StartSceneCount;
+    public string _JYSceneCount;
+    public string _ElasSceneCount;
+    public string _JiayuSceneCount;
+    public string _JingxuanSceneCount;
+    public string _SerenaSceneCount;
+    public string _ShujieSceneCount;
 
     public void Send() {
         //_totalBalls = 12;
@@ -46,6 +53,14 @@ public class SendToGoogle : MonoBehaviour
         form.AddField("entry.301892217", hitGateKey);
         form.AddField("entry.204214296", gameOverReason);
         form.AddField("entry.996612829", distance);
+        // scene count
+        form.AddField("entry.1542345612", _StartSceneCount);
+        form.AddField("entry.2086177145", _JingxuanSceneCount);
+        form.AddField("entry.276954649", _ShujieSceneCount);
+        form.AddField("entry.71217696", _SerenaSceneCount);
+        form.AddField("entry.825175678", _JYSceneCount);
+        form.AddField("entry.711519537", _ElasSceneCount);
+        form.AddField("entry.1458266563", _JiayuSceneCount);
 
 
         using (UnityWebRequest www = UnityWebRequest.Post(URL, form)) {

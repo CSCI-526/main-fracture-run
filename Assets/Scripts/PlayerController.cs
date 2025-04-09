@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     private float lastMessageDistance = 0f; // 上一次显示“Great!”的距离
 
     public TMP_Text messageText;
+    
+    private Hashtable ht = new Hashtable();
     // Start is called before the first frame update
     private void Start()
     {
@@ -69,6 +71,7 @@ public class PlayerController : MonoBehaviour
         //{
             //Debug.LogError("CameraShake script not found in the scene!");
         //}
+        ht.Add("StartScene", "0");
     }
 
 
@@ -83,6 +86,7 @@ public class PlayerController : MonoBehaviour
             googleForm._totalBalls = ballCount;
             current_position = transform.position.x;
             googleForm._distance = -(current_position - start_position);
+            updateGoogleSceneCount();
             googleForm.Send();
             BallCountCheckFlag = false;
         }
@@ -102,6 +106,7 @@ public class PlayerController : MonoBehaviour
             googleForm._totalBalls = ballCount;
             current_position = transform.position.x;
             googleForm._distance = -(current_position - start_position);
+            updateGoogleSceneCount();
             googleForm.Send();
         }
 
@@ -212,11 +217,16 @@ public class PlayerController : MonoBehaviour
 
     // Add to the ball count.
     public void AddBallCount(int amount)
-        {
-            ballCount += amount;
-            Debug.Log("Ball count updated! Total balls: " + ballCount);
-            UpdateBallCountUI(); // Ensure the UI updates whenever the ball count changes
+    {
+        ballCount += amount;
+        Debug.Log("Ball count updated! Total balls: " + ballCount);
+        UpdateBallCountUI(); // Ensure the UI updates whenever the ball count changes
+        if(objectSpawner.currPrefab == null)
+            ChangeBallCountInHashTable("StartScene", amount);
+        else {
+            ChangeBallCountInHashTable(objectSpawner.currPrefab.name, amount);
         }
+    }
 
     // Handle physics-based movement and rotation.
     private void FixedUpdate()
@@ -292,6 +302,11 @@ public class PlayerController : MonoBehaviour
     {
         ballCount = Mathf.Max(0, ballCount + change_score);
         UpdateBallCountUI();
+        if(objectSpawner.currPrefab == null)
+            ChangeBallCountInHashTable("StartScene", change_score);
+        else {
+            ChangeBallCountInHashTable(objectSpawner.currPrefab.name, change_score);
+        }
     }
 
 
@@ -304,5 +319,28 @@ public class PlayerController : MonoBehaviour
             googleForm._gameOverReason = "Success";
             googleForm.Send();
         }
+    }
+
+    private void ChangeBallCountInHashTable(string scene_name, int amount) {
+        if(!ht.Contains(scene_name)) {
+            ht.Add(scene_name, "0");
+        }
+        //int scene_count = int.Parse(ht[scene_name]);
+        string s = (string)ht[scene_name];
+        int scene_count = int.Parse(s);
+        scene_count += amount;
+        ht[scene_name] = scene_count.ToString();
+        Debug.Log("hashtable scene count");
+        Debug.Log(scene_count);
+    }
+
+    private void updateGoogleSceneCount() {
+        googleForm._StartSceneCount = ht.Contains("StartScene") ? (string)ht["StartScene"] : "none";
+        googleForm._JiayuSceneCount = ht.Contains("JiayuScene(Clone)") ? (string)ht["JiayuScene(Clone)"] : "none";
+        googleForm._JingxuanSceneCount = ht.Contains("JingxuanScene(Clone)") ? (string)ht["JingxuanScene(Clone)"] : "none";
+        googleForm._JYSceneCount = ht.Contains("JYScene(Clone)") ? (string)ht["JYScene(Clone)"] : "none";
+        googleForm._SerenaSceneCount = ht.Contains("SerenaScene(Clone)") ? (string)ht["SerenaScene(Clone)"] : "none";
+        googleForm._ShujieSceneCount = ht.Contains("ShujieScene(Clone)") ? (string)ht["ShujieScene(Clone)"] : "none";
+        googleForm._ElasSceneCount = ht.Contains("ElsaScene(Clone)") ? (string)ht["ElsaScene(Clone)"] : "none";
     }
 }
