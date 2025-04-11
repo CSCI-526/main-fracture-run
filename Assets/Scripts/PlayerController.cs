@@ -38,8 +38,10 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
         UpdateBallCountUI();
         UpdateDistanceUI();
-        messageText.text = ""; 
-        messageText.gameObject.SetActive(false); 
+        if (SceneManager.GetActiveScene().name == "SampleScene") {
+            messageText.text = ""; 
+            messageText.gameObject.SetActive(false); 
+        } 
         gameOverText.gameObject.SetActive(false);
         googleForm._scene = "Start_Scene";
         start_position = 0;
@@ -48,10 +50,7 @@ public class PlayerController : MonoBehaviour
         {
             distanceText.gameObject.SetActive(true); // 禁用距离文本
         }
-        else
-        {
-            distanceText.gameObject.SetActive(true); // 启用距离文本
-        }
+        
 
 
         GameObject spawnPoint = GameObject.FindGameObjectWithTag("Respawn");
