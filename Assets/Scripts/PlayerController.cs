@@ -28,11 +28,16 @@ public class PlayerController : MonoBehaviour
 
     public TMP_Text distanceText;
     private float lastMessageDistance = 0f; // 上一次显示“Great!”的距离
-
+    public static float distanceTraveled;
     public TMP_Text messageText;
     
     private Hashtable ht = new Hashtable();
     // Start is called before the first frame update
+
+    public static class GameData
+    {
+        public static float distanceTraveled;
+    }
     private void Start()
     {
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
@@ -78,6 +83,7 @@ public class PlayerController : MonoBehaviour
     {
         if (ballCount == 0 && BallCountCheckFlag)
         {
+            GameData.distanceTraveled = -transform.position.x+start_position;
             SceneManager.LoadScene("DeathScene1");
             if(objectSpawner.currPrefab != null)
                 googleForm._scene = objectSpawner.currPrefab.name;
@@ -98,6 +104,7 @@ public class PlayerController : MonoBehaviour
         // game over
         float playerY = transform.position.y;
         if (playerY < gameOverY) {
+            GameData.distanceTraveled = -transform.position.x + start_position;
             SceneManager.LoadScene("DeathScene");
             if(objectSpawner.currPrefab != null)
                 googleForm._scene = objectSpawner.currPrefab.name;

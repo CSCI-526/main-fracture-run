@@ -95,6 +95,17 @@ public class Obstacle : MonoBehaviour
             gameObject.SetActive(false);
         }
 
+        if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Crystal"))
+        {
+            if (playerController != null)
+            {
+                Debug.Log("Player hit the obstacle: " + gameObject.name);
+                ShowFloatingText("+3");
+                playerController.AddBallCount(3); // Increase ball count
+            }
+            gameObject.SetActive(false);
+        }
+
         if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Fan"))
         {
             Debug.Log("Player collides with Fan!");
