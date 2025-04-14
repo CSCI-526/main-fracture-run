@@ -13,6 +13,7 @@ TagManager:
   - Main
   - Gate
   - Laser
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -23,8 +24,8 @@ TagManager:
   - Crystal
   - Player
   - Ball
-  - laser
-  - 
+  - Laser
+  - Key
   - 
   - 
   - 

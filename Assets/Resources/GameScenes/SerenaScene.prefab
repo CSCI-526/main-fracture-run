@@ -2342,9 +2342,9 @@ GameObject:
   - component: {fileID: 5060196815466630895}
   - component: {fileID: 7784849815242974958}
   - component: {fileID: 3933629651464809368}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: LV1_GateOpen
-  m_TagString: Crystal
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2568,9 +2568,9 @@ GameObject:
   - component: {fileID: 498569939151632003}
   - component: {fileID: 3927879900789522682}
   - component: {fileID: 2483435497672123278}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: LV1_GateOpen
-  m_TagString: Crystal
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
