@@ -25,7 +25,9 @@ public class ThrowSphere : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) 
         {
-            obstacleManager.ShowFloatingText("-1");
+            if ( playerController.ballCount >0){
+                obstacleManager.ShowFloatingText("-1");
+            }
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 targetPoint = ray.GetPoint(50);
             Debug.Log("Throw!");

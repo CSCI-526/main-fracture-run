@@ -272,7 +272,7 @@ public class PlayerController : MonoBehaviour
             {
 
                 ballCountText.color = Color.white;
-                ballCountText.fontSize = 84; 
+                ballCountText.fontSize = 54; 
             }
         }
         else
