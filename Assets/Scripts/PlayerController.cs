@@ -49,7 +49,18 @@ public class PlayerController : MonoBehaviour
         } 
         gameOverText.gameObject.SetActive(false);
         googleForm._scene = "Start_Scene";
-        start_position = 0;
+
+
+        if (SceneManager.GetActiveScene().name == "SampleScene")
+        {
+            start_position = 0;
+        }
+        else if (SceneManager.GetActiveScene().name == "TutorialScene")
+        {
+            start_position = 52.6f; 
+        }
+
+        Debug.LogError("{start_position}"+ start_position );
 
         if (SceneManager.GetActiveScene().name == "SampleScene")
         {
