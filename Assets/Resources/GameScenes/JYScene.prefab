@@ -372,7 +372,6 @@ GameObject:
   - component: {fileID: 3817291125899390377}
   - component: {fileID: 9075316847271826280}
   - component: {fileID: 1202902604164837521}
-  - component: {fileID: 8770870378374439535}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Obstacle
@@ -466,22 +465,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8770870378374439535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2957483032919486611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &3817650264886001711
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +477,6 @@ GameObject:
   - component: {fileID: 1348335246794203138}
   - component: {fileID: 962232682519076696}
   - component: {fileID: 8338813449905474147}
-  - component: {fileID: 41163961939974642}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Obstacle
@@ -588,22 +570,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &41163961939974642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3817650264886001711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &3842767555226763966
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +755,6 @@ GameObject:
   - component: {fileID: 5595389249520971382}
   - component: {fileID: 692179698109115745}
   - component: {fileID: 6475340640849936978}
-  - component: {fileID: 1740223007858071835}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Obstacle
@@ -883,22 +848,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1740223007858071835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5036613510416166263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &5970959023262684772
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,7 +860,6 @@ GameObject:
   - component: {fileID: 6120526691879110933}
   - component: {fileID: 9121455618874761834}
   - component: {fileID: 1906973112450647883}
-  - component: {fileID: 7120141687547980581}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Obstacle
@@ -1005,22 +953,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7120141687547980581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5970959023262684772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &6216489158176182981
 GameObject:
   m_ObjectHideFlags: 0

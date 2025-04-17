@@ -47,7 +47,10 @@ public class PlayerController : MonoBehaviour
             messageText.gameObject.SetActive(false); 
         } 
         googleForm._scene = "Start_Scene";
-
+        if (SceneManager.GetActiveScene().name == "TutorialScene") {
+            googleForm._scene = "Tutorial_scene";
+        }
+ 
 
         if (SceneManager.GetActiveScene().name == "SampleScene")
         {
@@ -314,6 +317,7 @@ public class PlayerController : MonoBehaviour
     {
         ballCount = Mathf.Max(0, ballCount + change_score);
         UpdateBallCountUI();
+        if (SceneManager.GetActiveScene().name == "TutorialScene") return;
         if(objectSpawner.currPrefab == null)
             ChangeBallCountInHashTable("StartScene", change_score);
         else {
