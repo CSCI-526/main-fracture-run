@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
             start_position = 52.6f; 
         }
 
-        Debug.LogError("{start_position}"+ start_position );
+        Debug.Log("{start_position}"+ start_position );
 
         if (SceneManager.GetActiveScene().name == "SampleScene")
         {
