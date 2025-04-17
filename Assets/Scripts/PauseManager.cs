@@ -6,9 +6,20 @@ public class PauseManager : MonoBehaviour
     public GameObject pauseMenuUI;
     private bool isPaused = false;
 
+    // void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Escape))
+    //     {
+    //         if (isPaused)
+    //             Resume();
+    //         else
+    //             Pause();
+    //     }
+    // }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Q))
         {
             if (isPaused)
                 Resume();
@@ -16,6 +27,7 @@ public class PauseManager : MonoBehaviour
                 Pause();
         }
     }
+
 
     public void Resume()
     {
