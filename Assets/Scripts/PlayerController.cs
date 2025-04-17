@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     public int ballCount = 5; //Start with 5 balls.
     public TMP_Text ballCountText; // Reference to the Text UI for curr
     
-    public TMP_Text gameOverText;
     private float gameOverY = -3.0f; // when player z value is smaller than -1 ----> game over
 
     public SendToGoogle googleForm;
@@ -47,7 +46,6 @@ public class PlayerController : MonoBehaviour
             messageText.text = ""; 
             messageText.gameObject.SetActive(false); 
         } 
-        gameOverText.gameObject.SetActive(false);
         googleForm._scene = "Start_Scene";
 
 
@@ -161,7 +159,7 @@ public class PlayerController : MonoBehaviour
         {
             current_position = transform.position.x;
             float distanceTraveled = -(current_position - start_position);
-            distanceText.fontSize = 44;
+            distanceText.fontSize = 34;
             distanceText.text = "Distance: " + distanceTraveled.ToString("F2") + " m";
 
         }
@@ -277,13 +275,13 @@ public class PlayerController : MonoBehaviour
             if (ballCount < 5)
             {
                 ballCountText.color = Color.red;
-                ballCountText.fontSize = 104; 
+                ballCountText.fontSize = 54; 
             }
             else
             {
 
                 ballCountText.color = Color.white;
-                ballCountText.fontSize = 54; 
+                ballCountText.fontSize = 34; 
             }
         }
         else
@@ -294,8 +292,6 @@ public class PlayerController : MonoBehaviour
 
 
     public void ShowGameOver() {
-        gameOverText.gameObject.SetActive(true);
-        gameOverText.alignment = TextAlignmentOptions.Center; // make the text apper in the center of the camera
         Time.timeScale = 0f;
         Debug.Log("Game Over!");
     }
@@ -311,7 +307,6 @@ public class PlayerController : MonoBehaviour
     public void RestartGame()
     {
         Teleport(spawnTransform);
-        gameOverText.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1f;
     }
