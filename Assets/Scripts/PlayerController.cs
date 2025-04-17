@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour
         {
             current_position = transform.position.x;
             float distanceTraveled = -(current_position - start_position);
-            distanceText.fontSize = 34;
+            distanceText.fontSize = 28;
             distanceText.text = "Distance: " + distanceTraveled.ToString("F2") + " m";
 
         }
@@ -278,13 +278,13 @@ public class PlayerController : MonoBehaviour
             if (ballCount < 5)
             {
                 ballCountText.color = Color.red;
-                ballCountText.fontSize = 54; 
+                ballCountText.fontSize = 40; 
             }
             else
             {
 
                 ballCountText.color = Color.white;
-                ballCountText.fontSize = 34; 
+                ballCountText.fontSize = 28; 
             }
         }
         else
