@@ -8,7 +8,8 @@ public class EndSceneManager : MonoBehaviour
 
     private void Start()
     {
-
+        if (SceneManager.GetActiveScene().name == "EndScene")
+            distanceText.gameObject.SetActive(false);
         distanceText.fontSize = 80;
         distanceText.text = "Distance: " + PlayerController.GameData.distanceTraveled.ToString("F2") + " m"; // 更新文本
     }

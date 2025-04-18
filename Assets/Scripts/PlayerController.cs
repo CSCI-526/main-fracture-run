@@ -58,7 +58,8 @@ public class PlayerController : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "TutorialScene")
         {
-            start_position = 52.6f; 
+            start_position = 52.6f;
+            ballCountText.fontSize = 28;
         }
 
         Debug.Log("{start_position}"+ start_position );
@@ -81,7 +82,7 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("SpawnPoint not found in the scene!");
         }
         Teleport(spawnTransform);
-
+        
         //cameraShake = FindObjectOfType<CameraShake>();
         //if (cameraShake == null)
         //{
@@ -239,6 +240,7 @@ public class PlayerController : MonoBehaviour
         ballCount += amount;
         Debug.Log("Ball count updated! Total balls: " + ballCount);
         UpdateBallCountUI(); // Ensure the UI updates whenever the ball count changes
+        if (SceneManager.GetActiveScene().name == "TutorialScene")  return;
         if(objectSpawner.currPrefab == null)
             ChangeBallCountInHashTable("StartScene", amount);
         else {
@@ -284,7 +286,8 @@ public class PlayerController : MonoBehaviour
             {
 
                 ballCountText.color = Color.white;
-                ballCountText.fontSize = 28; 
+                ballCountText.fontSize = 28;
+                //Debug.Log("ballcount text font = 28"); 
             }
         }
         else
