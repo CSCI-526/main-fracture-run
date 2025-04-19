@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.UI;
 
 public class Obstacle : MonoBehaviour
 {
@@ -11,6 +11,8 @@ public class Obstacle : MonoBehaviour
     public Transform canvasTransform; 
     private bool penaltyApplied = false;
 
+    public GameObject transparentObject; // Reference to the transparent object
+    public Image uiImage;
     private void Start()
     {
         // Ensure the PlayerController reference is set at the start.
@@ -128,8 +130,34 @@ public class Obstacle : MonoBehaviour
                 gameObject.SetActive(false); // Deactivate the Fan instead of destroying it
             }
 
-        } 
+        }
+        if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Star"))
+        {
+            // Make the transparent object disappear
+            HandleTransparentObjectCollision();
+
+        }
 
     }
+    private void HandleTransparentObjectCollision()
+    {
+        Destroy(transparentObject);
+
+        // Show the UI image
+        if (uiImage != null)
+        {
+            uiImage.gameObject.SetActive(true); // Activate the UI image
+            uiImage.transform.position = new Vector3(Screen.width / 2, Screen.height / 2, 0); // Adjust position as needed
+        }
+        else
+        {
+            Debug.LogError("UIImage is not assigned!");
+        }
+        
+    }
+
+
+
+
 }
 
