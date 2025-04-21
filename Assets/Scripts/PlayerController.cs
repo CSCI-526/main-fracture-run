@@ -26,10 +26,16 @@ public class PlayerController : MonoBehaviour
     private float current_position;
 
     public TMP_Text distanceText;
-    private float lastMessageDistance = 0f; // 上一次显示“Great!”的距离
+    private float lastMessageDistance = 0f; 
     public static float distanceTraveled;
     public TMP_Text messageText;
-    
+
+    public Image starImage;   
+    public float tolerance =10f;
+    private bool starShown = false;
+    private float starCooldown = 5f; 
+    private float lastStarTime = 0f; 
+
     private Hashtable ht = new Hashtable();
     // Start is called before the first frame update
 
@@ -66,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "SampleScene")
         {
-            distanceText.gameObject.SetActive(true); // 禁用距离文本
+            distanceText.gameObject.SetActive(true); 
         }
         
 
@@ -89,6 +95,11 @@ public class PlayerController : MonoBehaviour
             //Debug.LogError("CameraShake script not found in the scene!");
         //}
         ht.Add("StartScene", "0");
+
+        if (starImage != null)
+        {
+            starImage.gameObject.SetActive(false);
+        }
     }
 
 
@@ -154,6 +165,66 @@ public class PlayerController : MonoBehaviour
         //     RestartGame();
         // }
 
+        GameObject[] endCubes = GameObject.FindGameObjectsWithTag("EndCube");
+
+        foreach (GameObject endCube in endCubes)
+        {
+            Collider endCubeCollider = endCube.GetComponent<Collider>();
+            if (endCubeCollider != null)
+            {
+                Vector3 playerPos = transform.position;
+
+
+                if (endCubeCollider.bounds.Contains(playerPos) ||
+                    (Mathf.Abs(playerPos.x - endCube.transform.position.x) < tolerance &&
+                     playerPos.y <= endCube.transform.position.y + endCubeCollider.bounds.extents.y + tolerance &&
+                     playerPos.y >= endCube.transform.position.y - endCubeCollider.bounds.extents.y - tolerance))
+                {
+             
+                    if (!starShown || (Time.time - lastStarTime >= starCooldown))
+                    {
+                        Debug.Log("Player reached EndCube!");
+                        ShowStar();
+                        lastStarTime = Time.time; 
+                        starShown = true; 
+                    }
+                    break;
+                }
+            }
+        }
+
+        if (Time.time - lastStarTime >= starCooldown)
+        {
+            starShown = false; 
+        }
+
+    }
+    private void ShowStar()
+    {
+        if (starImage != null)
+        {
+            starImage.gameObject.SetActive(true); 
+            starImage.transform.localScale = Vector3.zero;
+            StartCoroutine(AnimateStar());
+        }
+    }
+
+    private IEnumerator AnimateStar()
+    {
+        float duration = 1f;
+        float elapsed = 0f;
+
+
+        while (elapsed < duration)
+        {
+            float scale = Mathf.Lerp(0f, 1.5f, elapsed / duration); 
+            starImage.transform.localScale = new Vector3(scale, scale, scale);
+            elapsed += Time.deltaTime;
+            yield return null; 
+        }
+
+        yield return new WaitForSeconds(0.5f);
+        starImage.gameObject.SetActive(false); 
     }
 
     private void UpdateDistanceUI()

@@ -123,6 +123,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &6422106678328170370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,6 +456,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &1056234095152665922
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -671,6 +675,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &732115008320569204
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1777,6 +1783,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &1555773781578116204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1955,6 +1963,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &2222226663923216909
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2105,6 +2115,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &2026478814918486109
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2256,6 +2268,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &3787823023318189055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2272,6 +2286,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &2505942508242696037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2524,6 +2540,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &3064775086057362296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2745,6 +2763,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &2309255358446199417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2869,6 +2889,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &2573291017921404850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3246,6 +3268,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &4541373190190933636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3580,6 +3604,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &3560778112363579959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3751,6 +3777,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &5506329056162609993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3908,6 +3936,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &6336699908761088115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3924,6 +3954,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &491120114692487421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4274,6 +4306,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &5034360033120956800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4290,6 +4324,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &6647838256125485261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4541,6 +4577,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &6187874973607298547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4685,6 +4723,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &133065633569106875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4711,7 +4751,7 @@ GameObject:
   - component: {fileID: 9193287767560188419}
   m_Layer: 0
   m_Name: EndCube
-  m_TagString: Untagged
+  m_TagString: EndCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5046,6 +5086,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &6981051557450743079
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5334,6 +5376,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &7955514577692107111
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5517,6 +5561,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &8607516599520182714
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5645,6 +5691,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &8445340822707862120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5790,6 +5838,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &8425931114857189211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5806,6 +5856,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &3903517244044444567
 MonoBehaviour:
   m_ObjectHideFlags: 0

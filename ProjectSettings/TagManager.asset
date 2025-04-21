@@ -15,6 +15,7 @@ TagManager:
   - Laser
   - Key
   - Star
+  - EndCube
   layers:
   - Default
   - TransparentFX

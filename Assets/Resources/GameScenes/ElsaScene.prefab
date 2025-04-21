@@ -206,6 +206,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &1428397550598922503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -764,6 +766,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &1294614668139677493
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -955,6 +959,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &2027717488746192289
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1104,6 +1110,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 0}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!1 &1793620670162517662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,6 +1213,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &7135284841342909933
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1487,6 +1497,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 0}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!1 &2203028385375949616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,6 +1726,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 0}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!1 &2907834543040568272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,6 +1888,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 0}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!1 &3070847479993238386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2031,6 +2047,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &6107176435179650439
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2337,6 +2355,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &1593770468473992570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2481,6 +2501,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &3988309715680419091
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2630,6 +2652,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 0}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!1 &4762720657178468373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,6 +2776,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 0}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!1 &5163163726604317139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,6 +2900,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 0}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!1 &5270740532854863270
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,6 +3130,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &5146208196611633016
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3627,6 +3657,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &1445189734402375027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3770,6 +3802,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 0}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!1 &7054612854504045912
 GameObject:
   m_ObjectHideFlags: 0
@@ -3976,6 +4010,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &4779713625228704170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4119,6 +4155,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 0}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!1 &7836344734764379548
 GameObject:
   m_ObjectHideFlags: 0
@@ -4242,6 +4280,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &2853671906070801175
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4433,6 +4473,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &8080415870949077194
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4687,6 +4729,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 0}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!1 &8636490613182267221
 GameObject:
   m_ObjectHideFlags: 0
@@ -5045,6 +5089,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &8950177360480633646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5250,6 +5296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndCube
       objectReference: {fileID: 0}
+    - target: {fileID: 8455722975345742600, guid: 14ad5090425914a1698ca2765b92647c, type: 3}
+      propertyPath: m_TagString
+      value: EndCube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5451,6 +5501,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &5706779972047373583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5570,6 +5622,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &3697024242787479559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5689,6 +5743,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &8416092152131728124
 MonoBehaviour:
   m_ObjectHideFlags: 0

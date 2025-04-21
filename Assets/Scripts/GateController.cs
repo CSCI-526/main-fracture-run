@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,6 +29,7 @@ public class GateController : MonoBehaviour
         }
         leftGateTarget = left_gate.transform.position + new Vector3(0, 0, -openDistance);
         rightGateTarget = right_gate.transform.position + new Vector3(0, 0, openDistance);
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -55,6 +56,7 @@ public class GateController : MonoBehaviour
             right_gate.transform.position = rightGateTarget;
         }
     }
+
 
 
 }

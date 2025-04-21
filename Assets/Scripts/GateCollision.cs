@@ -12,21 +12,6 @@ public class GateCollision : MonoBehaviour
     public Obstacle obstacleManager;
     public CameraShake cameraShake;
 
-
-    public GameObject transparentObject; // Reference to the transparent object
-    public Image uiImage; // Reference to the UI image
-    public Canvas uiCanvas; // Reference to the Canvas
-
-    private void Start()
-    {
-        // Instantiate the transparent object behind the gate
-        transparentObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        transparentObject.transform.position = transform.position + new Vector3(0, 0, 1);
-        transparentObject.transform.localScale = new Vector3(1, 1, 1); // Adjust size as needed
-        transparentObject.GetComponent<Renderer>().material = new Material(Shader.Find("Transparent/Diffuse"));
-        transparentObject.GetComponent<Collider>().isTrigger = true;
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         // Check if the object colliding with the obstacle is the ball.

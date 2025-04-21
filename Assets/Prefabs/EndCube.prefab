@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5986980116077556428}
   m_Layer: 0
   m_Name: EndCube
-  m_TagString: Untagged
+  m_TagString: EndCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

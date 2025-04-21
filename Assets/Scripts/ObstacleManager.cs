@@ -134,6 +134,7 @@ public class Obstacle : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && gameObject.CompareTag("Star"))
         {
             // Make the transparent object disappear
+            Debug.Log("Make the transparent object disappear");
             HandleTransparentObjectCollision();
 
         }
