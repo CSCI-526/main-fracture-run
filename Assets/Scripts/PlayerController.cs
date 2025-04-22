@@ -38,10 +38,10 @@ public class PlayerController : MonoBehaviour
 
     private Hashtable ht = new Hashtable();
     // Start is called before the first frame update
-
-    public static class GameData
+    public class GameData
     {
         public static float distanceTraveled;
+        public static int star_num;
     }
     private void Start()
     {
@@ -186,7 +186,9 @@ public class PlayerController : MonoBehaviour
                         Debug.Log("Player reached EndCube!");
                         ShowStar();
                         lastStarTime = Time.time; 
-                        starShown = true; 
+                        starShown = true;
+                        GameData.star_num++; 
+                        //Debug.Log("star_num++");
                     }
                     break;
                 }

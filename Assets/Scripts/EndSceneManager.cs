@@ -11,7 +11,8 @@ public class EndSceneManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "EndScene")
             distanceText.gameObject.SetActive(false);
         distanceText.fontSize = 80;
-        distanceText.text = "Distance: " + PlayerController.GameData.distanceTraveled.ToString("F2") + " m"; // 更新文本
+        //distanceText.text = "Distance: " + PlayerController.GameData.distanceTraveled.ToString("F2") + " m"; // 更新文本
+        distanceText.text = "Star: " + PlayerController.GameData.star_num.ToString();
     }
 
     public void RestartGame()
