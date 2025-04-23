@@ -142,7 +142,7 @@ public class PlayerController : MonoBehaviour
 
         if (ballCount == 0)
         {
-            Invoke("BallCountCheck", 2f);
+            Invoke("BallCountCheck", 1f);
             //BallCountCheck();
         }
         UpdateDistanceUI();
