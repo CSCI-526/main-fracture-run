@@ -414,7 +414,6 @@ public class PlayerController : MonoBehaviour
         if(other.CompareTag("getStar")) {
             if (!starShown || (Time.time - lastStarTime >= starCooldown))
             {
-                Debug.Log("Player reached EndCube!");
                 ShowStar();
                 lastStarTime = Time.time; 
                 starShown = true;
