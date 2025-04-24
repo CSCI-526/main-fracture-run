@@ -37,6 +37,9 @@ public class PlayerController : MonoBehaviour
     private float lastStarTime = 0f; 
 
     private Hashtable ht = new Hashtable();
+
+    public TMP_Text starNumText;
+    private int star_num = 0;
     // Start is called before the first frame update
     public class GameData
     {
@@ -187,7 +190,9 @@ public class PlayerController : MonoBehaviour
                         ShowStar();
                         lastStarTime = Time.time; 
                         starShown = true;
-                        GameData.star_num++; 
+                        star_num++;
+                        GameData.star_num = star_num; 
+                        starNumText.text = star_num.ToString();
                         //Debug.Log("star_num++");
                     }
                     break;

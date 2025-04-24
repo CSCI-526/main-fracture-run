@@ -66,7 +66,6 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/EndTriggerscript.cs" />
     <Compile Include="Assets/Scripts/EndSceneManager.cs" />
-    <Compile Include="Assets/Scripts/TextSizeManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
     <Compile Include="Assets/Scripts/PauseManager.cs" />
