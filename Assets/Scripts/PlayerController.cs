@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     
     private float current_position;
 
-    public TMP_Text distanceText;
+    private TMP_Text distanceText;
     private float lastMessageDistance = 0f; 
     public static float distanceTraveled;
     public TMP_Text messageText;
