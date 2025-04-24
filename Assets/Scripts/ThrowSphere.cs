@@ -12,11 +12,44 @@ public class ThrowSphere : MonoBehaviour
 
     public Obstacle obstacleManager;
 
-
+    private bool isBurstMode = false;
+    private float burstTimer = 0f;
+    private float burstDuration = 3f;
+    private float burstCooldown = 0.3f;
+    private float burstFireRateTimer = 0f;
 
     void Update()
     {
         if (Time.timeScale == 0f) return;
+
+        if (isBurstMode)
+        {
+            burstTimer -= Time.deltaTime;
+            burstFireRateTimer -= Time.deltaTime;
+
+            if (burstTimer <= 0f)
+            {
+                isBurstMode = false;
+                Debug.Log("Burst mode ended.");
+            }
+            else if (burstFireRateTimer <= 0f && playerController.ballCount > 0)
+            {
+                // Vector3 forwardPoint = transform.position + transform.forward * 10f;
+                // Throw(forwardPoint);
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Vector3 targetPoint = ray.GetPoint(50);
+                Debug.Log("Throw!");
+                Throw(targetPoint);
+                burstFireRateTimer = burstCooldown;
+            }
+
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ActivateBurstMode();
+        }
 
         if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
         {
@@ -36,6 +69,18 @@ public class ThrowSphere : MonoBehaviour
         }
     }
 
+    public void ActivateBurstMode()
+    {
+        if(playerController.ultimate_num > 0) {
+            isBurstMode = true;
+            burstTimer = burstDuration;
+            burstFireRateTimer = 0f;
+            Debug.Log("Burst mode activated!");
+            playerController.ultimate_num--;
+            playerController.ultimateNumText.text = playerController.ultimate_num.ToString();
+        }
+        
+    }
 
     // void Update()
     // {
@@ -126,8 +171,8 @@ public class ThrowSphere : MonoBehaviour
             //rb.AddForce(throwDirection * throwForce, ForceMode.VelocityChange);
             //Debug.Log("球体朝 " + targetPoint + " 抛出！");
 
-
-            playerController.AddBallCount(-1);
+            if(!isBurstMode)
+                playerController.AddBallCount(-1);
         }
         else
         {
@@ -135,17 +180,17 @@ public class ThrowSphere : MonoBehaviour
         }
     }
 
-    public Vector3 SetInitialVelocity(Vector3 throwDirection, float playerSpeed, float speed, float angleOffset)
-    {
-        Vector3 projection = Vector3.ProjectOnPlane(throwDirection, Vector3.up);
-        float angle = Vector3.Angle(throwDirection, projection) + angleOffset;
-        float radian = angle * Mathf.Deg2Rad;
-        float verticalSpeed = speed * Mathf.Sin(radian);
-        float horizontalSpeed = speed * Mathf.Cos(radian);
-        //Vector3 playerDirection = playerController.transform.forward;
+    // public Vector3 SetInitialVelocity(Vector3 throwDirection, float playerSpeed, float speed, float angleOffset)
+    // {
+    //     Vector3 projection = Vector3.ProjectOnPlane(throwDirection, Vector3.up);
+    //     float angle = Vector3.Angle(throwDirection, projection) + angleOffset;
+    //     float radian = angle * Mathf.Deg2Rad;
+    //     float verticalSpeed = speed * Mathf.Sin(radian);
+    //     float horizontalSpeed = speed * Mathf.Cos(radian);
+    //     //Vector3 playerDirection = playerController.transform.forward;
 
-        Vector3 horizontalVelocity = projection.normalized * horizontalSpeed;
-        Vector3 throwVelocity = horizontalVelocity + Vector3.up * verticalSpeed;
-        return throwVelocity;
-    }
+    //     Vector3 horizontalVelocity = projection.normalized * horizontalSpeed;
+    //     Vector3 throwVelocity = horizontalVelocity + Vector3.up * verticalSpeed;
+    //     return throwVelocity;
+    // }
 }

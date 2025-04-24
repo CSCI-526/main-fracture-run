@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour
 
     public TMP_Text starNumText;
     private int star_num = 0;
+    public int ultimate_num = 0;
+    public TMP_Text ultimateNumText;
     // Start is called before the first frame update
     public class GameData
     {
@@ -420,6 +422,10 @@ public class PlayerController : MonoBehaviour
                 star_num++;
                 GameData.star_num = star_num; 
                 starNumText.text = star_num.ToString();
+                if(star_num % 2 == 0) {
+                    ultimate_num++;
+                    ultimateNumText.text = ultimate_num.ToString();
+                }
                 //Debug.Log("star_num++");
             }
         }
