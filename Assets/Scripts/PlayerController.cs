@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
         GameData.star_num = star_num;
         UpdateBallCountUI();
-        UpdateDistanceUI();
+        //UpdateDistanceUI();
         if (SceneManager.GetActiveScene().name == "SampleScene") {
             messageText.text = ""; 
             messageText.gameObject.SetActive(false); 
@@ -76,10 +76,10 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("{start_position}"+ start_position );
 
-        if (SceneManager.GetActiveScene().name == "SampleScene")
-        {
-            distanceText.gameObject.SetActive(true); 
-        }
+        // if (SceneManager.GetActiveScene().name == "SampleScene")
+        // {
+        //     distanceText.gameObject.SetActive(true); 
+        // }
         
 
 

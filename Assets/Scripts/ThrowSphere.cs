@@ -14,7 +14,7 @@ public class ThrowSphere : MonoBehaviour
 
     private bool isBurstMode = false;
     private float burstTimer = 0f;
-    private float burstDuration = 3f;
+    private float burstDuration = 5f;
     private float burstCooldown = 0.3f;
     private float burstFireRateTimer = 0f;
 
