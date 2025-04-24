@@ -25,6 +25,7 @@ public class ThrowSphere : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) 
         {
+            Debug.Log("click mouse!");
             if ( playerController.ballCount >0){
                 obstacleManager.ShowFloatingText("-1");
             }

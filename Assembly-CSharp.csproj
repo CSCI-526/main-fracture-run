@@ -120,8 +120,10 @@
     <Compile Include="Assets/Scripts/PlayerController.cs" />
     <Compile Include="Assets/Scripts/CameraShake.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
+    <Compile Include="Assets/Scripts/StarGetter.cs" />
     <Compile Include="Assets/Scripts/IntroManager.cs" />
     <Compile Include="Assets/Scripts/Laser/LaserWall.cs" />
+    <Compile Include="Assets/BTM_Assets/BTM_Items_Gems/Scripts/SimpleGemsAnim.cs" />
     <Compile Include="Assets/Scripts/ImageSwitcher.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets/Scripts/FloatingText.cs" />
