@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
+        GameData.star_num = star_num;
         UpdateBallCountUI();
         UpdateDistanceUI();
         if (SceneManager.GetActiveScene().name == "SampleScene") {
@@ -168,37 +169,37 @@ public class PlayerController : MonoBehaviour
         //     RestartGame();
         // }
 
-        GameObject[] endCubes = GameObject.FindGameObjectsWithTag("EndCube");
+        // use end_cube to get star
+        //GameObject[] endCubes = GameObject.FindGameObjectsWithTag("EndCube");
+        // foreach (GameObject endCube in endCubes)
+        // {
+        //     Collider endCubeCollider = endCube.GetComponent<Collider>();
+        //     if (endCubeCollider != null)
+        //     {
+        //         Vector3 playerPos = transform.position;
 
-        foreach (GameObject endCube in endCubes)
-        {
-            Collider endCubeCollider = endCube.GetComponent<Collider>();
-            if (endCubeCollider != null)
-            {
-                Vector3 playerPos = transform.position;
 
-
-                if (endCubeCollider.bounds.Contains(playerPos) ||
-                    (Mathf.Abs(playerPos.x - endCube.transform.position.x) < tolerance &&
-                     playerPos.y <= endCube.transform.position.y + endCubeCollider.bounds.extents.y + tolerance &&
-                     playerPos.y >= endCube.transform.position.y - endCubeCollider.bounds.extents.y - tolerance))
-                {
+        //         if (endCubeCollider.bounds.Contains(playerPos) ||
+        //             (Mathf.Abs(playerPos.x - endCube.transform.position.x) < tolerance &&
+        //              playerPos.y <= endCube.transform.position.y + endCubeCollider.bounds.extents.y + tolerance &&
+        //              playerPos.y >= endCube.transform.position.y - endCubeCollider.bounds.extents.y - tolerance))
+        //         {
              
-                    if (!starShown || (Time.time - lastStarTime >= starCooldown))
-                    {
-                        Debug.Log("Player reached EndCube!");
-                        ShowStar();
-                        lastStarTime = Time.time; 
-                        starShown = true;
-                        star_num++;
-                        GameData.star_num = star_num; 
-                        starNumText.text = star_num.ToString();
-                        //Debug.Log("star_num++");
-                    }
-                    break;
-                }
-            }
-        }
+        //             if (!starShown || (Time.time - lastStarTime >= starCooldown))
+        //             {
+        //                 Debug.Log("Player reached EndCube!");
+        //                 ShowStar();
+        //                 lastStarTime = Time.time; 
+        //                 starShown = true;
+        //                 star_num++;
+        //                 GameData.star_num = star_num; 
+        //                 starNumText.text = star_num.ToString();
+        //                 //Debug.Log("star_num++");
+        //             }
+        //             break;
+        //         }
+        //     }
+        // }
 
         if (Time.time - lastStarTime >= starCooldown)
         {
@@ -409,13 +410,22 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Main"))
-        {
-            SceneManager.LoadScene("BeginScene"); // 切换到结算场景
-            googleForm._scene = SceneManager.GetActiveScene().name;
-            googleForm._gameOverReason = "Success";
-            googleForm.Send();
+        // get star
+        if(other.CompareTag("getStar")) {
+            if (!starShown || (Time.time - lastStarTime >= starCooldown))
+            {
+                Debug.Log("Player reached EndCube!");
+                ShowStar();
+                lastStarTime = Time.time; 
+                starShown = true;
+                star_num++;
+                GameData.star_num = star_num; 
+                starNumText.text = star_num.ToString();
+                //Debug.Log("star_num++");
+            }
         }
+
+
     }
 
     private void ChangeBallCountInHashTable(string scene_name, int amount) {

@@ -16,6 +16,7 @@ TagManager:
   - Key
   - Star
   - EndCube
+  - getStar
   layers:
   - Default
   - TransparentFX
