@@ -227,7 +227,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -15, y: -122}
-  m_SizeDelta: {x: 342.6764, y: 123.8649}
+  m_SizeDelta: {x: 230, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304325389
 MonoBehaviour:
@@ -334,7 +334,6 @@ GameObject:
   - component: {fileID: 332054791}
   - component: {fileID: 332054790}
   - component: {fileID: 332054789}
-  - component: {fileID: 332054788}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -342,14 +341,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!33 &332054788
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332054787}
-  m_Mesh: {fileID: 0}
 --- !u!114 &332054789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,8 +682,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
