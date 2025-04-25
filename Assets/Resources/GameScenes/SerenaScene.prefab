@@ -327,6 +327,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &1294614668139677493
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -584,6 +586,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &2027717488746192289
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -712,6 +716,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &2309914102387248336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -834,6 +840,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &7135284841342909933
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -972,10 +980,9 @@ GameObject:
   - component: {fileID: 4811362374981553138}
   - component: {fileID: 3826151613004712216}
   - component: {fileID: 3235595432230261138}
-  - component: {fileID: 7662600003345278337}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1066,22 +1073,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7662600003345278337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2174975612290869798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &2203028385375949616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,10 +1190,9 @@ GameObject:
   - component: {fileID: 6213091979817158638}
   - component: {fileID: 2697728577217315310}
   - component: {fileID: 1540651406188572927}
-  - component: {fileID: 3119470882936051851}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1293,22 +1283,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3119470882936051851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2281127609975217608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &2647221547062678545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,10 +1295,9 @@ GameObject:
   - component: {fileID: 8837518515338158557}
   - component: {fileID: 6590820446499139518}
   - component: {fileID: 1216742143576822400}
-  - component: {fileID: 1355783456720401317}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1415,22 +1388,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1355783456720401317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2647221547062678545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &3070847479993238386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,6 +1828,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &3988309715680419091
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1983,10 +1942,9 @@ GameObject:
   - component: {fileID: 2810176084279834687}
   - component: {fileID: 2438393122794122170}
   - component: {fileID: 1928400958985130195}
-  - component: {fileID: 1610514608438763530}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2077,22 +2035,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1610514608438763530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4253063304332644912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &4641258379900612543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2194,6 +2136,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &7653234062795846244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2338,6 +2282,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &2770219413670948165
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2476,10 +2422,9 @@ GameObject:
   - component: {fileID: 6461947372212170794}
   - component: {fileID: 752635208604048827}
   - component: {fileID: 4342522054841148303}
-  - component: {fileID: 1856179818101786931}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2570,22 +2515,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1856179818101786931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5163163726604317139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &6011321004600915930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2687,6 +2616,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &4994103489789674269
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3263,6 +3194,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &4779713625228704170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3296,10 +3229,9 @@ GameObject:
   - component: {fileID: 608809969084205039}
   - component: {fileID: 6968453588454759270}
   - component: {fileID: 6494797386740172571}
-  - component: {fileID: 3704045800397957222}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: Obstacle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3390,22 +3322,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3704045800397957222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7468061518749758477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a4be9e9c9ee457fb45091a2841286a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  cameraShake: {fileID: 0}
-  floatingTextPrefab: {fileID: 0}
-  canvasTransform: {fileID: 0}
 --- !u!1 &7647897504589741126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,6 +3722,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!54 &8080415870949077194
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4039,6 +3957,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!65 &1977654160242739584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4549,6 +4469,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &8950177360480633646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4796,6 +4718,8 @@ MonoBehaviour:
   cameraShake: {fileID: 0}
   floatingTextPrefab: {fileID: 4079374014358978504, guid: 35dd238a45127467e9600aa3c14dc864, type: 3}
   canvasTransform: {fileID: 0}
+  transparentObject: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!114 &8416092152131728124
 MonoBehaviour:
   m_ObjectHideFlags: 0
