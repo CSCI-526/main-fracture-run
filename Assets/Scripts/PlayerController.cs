@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5.0f; // Set player's movement speed.
     public float strafeSpeed = 4.0f; // Set player's rotation speed.
-    public int ballCount = 5; //Start with 5 balls.
+    public int ballCount = 10; //Start with 5 balls.
     public TMP_Text ballCountText; // Reference to the Text UI for curr
     
     private float gameOverY = -3.0f; // when player z value is smaller than -1 ----> game over
