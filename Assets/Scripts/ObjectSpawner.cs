@@ -20,21 +20,18 @@ public class ObjectSpawner : MonoBehaviour
     void Start()
     {
         endCube = GameObject.Find("EndCube").transform;
-        objectPrefabs = Resources.LoadAll<GameObject>("GameScenes");
-        poolSize = objectPrefabs.Length;
-        if (poolSize == 0)
-        {
-            Debug.LogError("No prefabs found in Resources/GameScenes!");
-            return;
-        }
-        index = poolSize - 1;
-/*
-        for (int i = 0; i < poolSize; i++)
-        {
-            objectPrefabs[i] = Instantiate(objectPrefabs[i]);
-            objectPrefabs[i].SetActive(false);
-            Debug.Log($"Start: Prefab {objectPrefabs[i]} instantiated at {objectPrefabs[i].transform.position}");
-        }*/
+        //objectPrefabs = Resources.LoadAll<GameObject>("GameScenes");
+        objectPrefabs = new GameObject[7];
+        objectPrefabs[0] = Resources.Load<GameObject>("GameScenes/JYScene");
+        objectPrefabs[1] = Resources.Load<GameObject>("GameScenes/TwoBranchScene");
+        objectPrefabs[2] = Resources.Load<GameObject>("GameScenes/ElsaScene");
+        objectPrefabs[3] = Resources.Load<GameObject>("GameScenes/SerenaScene");
+        objectPrefabs[4] = Resources.Load<GameObject>("GameScenes/JingxuanScene");
+        objectPrefabs[5] = Resources.Load<GameObject>("GameScenes/ShujieScene");
+        objectPrefabs[6] = Resources.Load<GameObject>("GameScenes/JiayuScene");
+
+        index = 0;
+
     }
 
     void Update()
@@ -52,7 +49,6 @@ public class ObjectSpawner : MonoBehaviour
 
         if (prevPrefab != null && player.transform.position.x < startCube.position.x && currPrefab != prevPrefab)
         {
-            //prevPrefab.SetActive(false);
             Destroy(prevPrefab);
         }
     }
@@ -61,21 +57,11 @@ public class ObjectSpawner : MonoBehaviour
     {
         Debug.Log("Call SpawnObject method");
 
-        if (poolSize == 0)
-        {
-            Debug.LogError("No prefabs available for spawning!");
-            return;
-        }
-
         if (currPrefab != null)
         {
             prevPrefab = currPrefab;
         }
 
-        // Shuffle the array of prefabs one by one
-        int randomIndex = Random.Range(0, index + 1);
-        Debug.Log("Random index: " + randomIndex);
-        swap(objectPrefabs, index, randomIndex);
         currPrefab = objectPrefabs[index];
 
         endCube = currPrefab.transform.Find("EndCube");
@@ -89,9 +75,8 @@ public class ObjectSpawner : MonoBehaviour
         offset = currPrefab.transform.position - startCube.transform.position;
         Debug.Log($"{currPrefab.name} offset: " + offset);
 
-        currPrefab.transform.position = spawnPosition + offset;/*
-        currPrefab.SetActive(true);
-        SetAllChildrenActive(currPrefab.transform, true);*/
+        currPrefab.transform.position = spawnPosition + offset;
+
         currPrefab = Instantiate(currPrefab);
     
         Obstacle[] obstacles = currPrefab.GetComponentsInChildren<Obstacle>();
@@ -104,33 +89,15 @@ public class ObjectSpawner : MonoBehaviour
 
         Debug.Log($"Object {currPrefab.name} spawn position {spawnPosition} activated at position {currPrefab.transform.position}");    
         
-        if (index > 0)
+        if (index < 6)
         {
-            index--;
+            index++;
         }
         else
         {
-            index = poolSize - 1;
+            index = 0;
         }
 
-    }
-
-    private void swap(GameObject[] arr, int i, int j)
-    {
-        GameObject temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-
-    private void SetAllChildrenActive(Transform parent, bool isActive)
-    {
-        foreach (Transform child in parent)
-        {
-            child.gameObject.SetActive(isActive);
-            Debug.Log($"Set {child.gameObject.name} active: {isActive}");
-            // Recursively activate children
-            SetAllChildrenActive(child, isActive);
-        }
     }
 
 }
