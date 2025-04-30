@@ -357,7 +357,8 @@ public class PlayerController : MonoBehaviour
     {
         if (ballCountText != null)
         {
-            ballCountText.text = "Total Balls: " + ballCount;
+            //ballCountText.text = "Total Balls: " + ballCount;
+            ballCountText.text = ": " + ballCount;
             if (ballCount < 5)
             {
                 ballCountText.color = Color.red;
