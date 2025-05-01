@@ -135,8 +135,23 @@ public class ThrowSphere : MonoBehaviour
             //Vector3 initialPosition = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
 
             // create sphere
+            
             GameObject sphere = Instantiate(spherePrefab, initialPosition, Quaternion.identity);
             Destroy(sphere, 3f); // Destroy the sphere after 5 seconds
+            Renderer sphereRenderer = sphere.GetComponent<Renderer>();
+            if (isBurstMode) {
+                
+                if (sphereRenderer != null)
+                {
+                    // Debug.Log("red");
+                    // sphereRenderer.material.color = Color.red; 
+                    sphereRenderer.material.color = new Color(0.7f, 0.4f, 0.8f);  // RGB 范围是 0 ~ 1
+                }
+            }
+            else {
+                // Debug.Log("grey");
+                sphereRenderer.material.color = Color.grey;
+            }
 
             Debug.Log("sphere created：" + sphere.name);
 
