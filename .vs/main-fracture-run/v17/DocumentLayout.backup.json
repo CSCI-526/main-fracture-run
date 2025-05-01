@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\35773\\OneDrive\\Desktop\\cs526\\main-fracture-run\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\35773\\OneDrive\\Desktop\\cs526\\main-fracture-run\\assets\\scripts\\obstaclemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\obstaclemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|c:\\users\\35773\\onedrive\\desktop\\cs526\\main-fracture-run\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\35773\\OneDrive\\Desktop\\cs526\\main-fracture-run\\assets\\scripts\\objectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|C:\\Users\\35773\\OneDrive\\Desktop\\cs526\\main-fracture-run\\assets\\scripts\\obstaclemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B1866EC5-8FB5-AF32-3729-72D68BC71B6E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\obstaclemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tyler\\Desktop\\526\\main-fracture-run\\Assets\\Scripts\\LaserWallSpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -54,11 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "GateController.cs",
               "DocumentMoniker": "C:\\Users\\35773\\OneDrive\\Desktop\\cs526\\main-fracture-run\\Assets\\Scripts\\GateController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GateController.cs",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ObjectSpawner.cs",
               "DocumentMoniker": "C:\\Users\\35773\\OneDrive\\Desktop\\cs526\\main-fracture-run\\Assets\\Scripts\\ObjectSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ObjectSpawner.cs",
@@ -82,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GateCollision.cs",
               "DocumentMoniker": "C:\\Users\\35773\\OneDrive\\Desktop\\cs526\\main-fracture-run\\Assets\\Scripts\\GateCollision.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GateCollision.cs",
@@ -94,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EndSceneManager.cs",
               "DocumentMoniker": "C:\\Users\\35773\\OneDrive\\Desktop\\cs526\\main-fracture-run\\Assets\\Scripts\\EndSceneManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EndSceneManager.cs",
@@ -106,28 +106,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\35773\\OneDrive\\Desktop\\cs526\\main-fracture-run\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\35773\\OneDrive\\Desktop\\cs526\\main-fracture-run\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAPEAAAAAAAAAAAAYwAMBAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAewIoAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T07:31:02.947Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "ObstacleManager.cs",
               "DocumentMoniker": "C:\\Users\\35773\\OneDrive\\Desktop\\cs526\\main-fracture-run\\Assets\\Scripts\\ObstacleManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ObstacleManager.cs",
               "ToolTip": "C:\\Users\\35773\\OneDrive\\Desktop\\cs526\\main-fracture-run\\Assets\\Scripts\\ObstacleManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\ObstacleManager.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAADwv4gAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAiwBcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T01:25:05.869Z"
+              "WhenOpened": "2025-04-05T01:25:05.869Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

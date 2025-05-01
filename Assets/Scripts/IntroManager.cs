@@ -15,7 +15,7 @@ public class IntroManager : MonoBehaviour
 
     void Start()
     {
-        // 检查基本引用
+   
         if (displayImage == null)
         {
             return;
@@ -26,7 +26,7 @@ public class IntroManager : MonoBehaviour
             return;
         }
 
-        // 注册按钮点击事件
+    
         if (nextButton != null)
         {
             nextButton.onClick.AddListener(NextPage);
@@ -52,7 +52,7 @@ public class IntroManager : MonoBehaviour
             Debug.LogError("Main Menu Button is not assigned!");
         }
 
-        // 初始化页面显示
+    
         UpdatePage();
     }
 

@@ -602,7 +602,7 @@ MonoBehaviour:
   pages:
   - {fileID: 21300000, guid: 799cf61f17dbbdd41b1e86f7eed52939, type: 3}
   - {fileID: 21300000, guid: c86b5b2b784605e44911c47d0c9260f5, type: 3}
-  - {fileID: 21300000, guid: b8c5bf5eb425be340a12ab58cb3d4e3c, type: 3}
+  - {fileID: 21300000, guid: d11be1718b1704f488059a5550382e19, type: 3}
   nextButton: {fileID: 1600660124}
   prevButton: {fileID: 1621043337}
   mainMenuButton: {fileID: 1489776026}
@@ -1182,7 +1182,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1674437965}
-  - component: {fileID: 1674437966}
   m_Layer: 0
   m_Name: EndSceneManager
   m_TagString: Untagged
@@ -1205,23 +1204,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1674437966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1674437963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1156947ce0301646b0bea3722658ff1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pages: []
-  nextButton: {fileID: 0}
-  prevButton: {fileID: 0}
-  mainMenuButton: {fileID: 1621043337}
-  displayImage: {fileID: 0}
 --- !u!1 &1724753357
 GameObject:
   m_ObjectHideFlags: 0
